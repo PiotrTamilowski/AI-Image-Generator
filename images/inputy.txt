@@ -1,0 +1,650 @@
+out-0.png
+prompt - Film still cinematic photography, tilt angle, perfect composition, hyperdetailed forest, autumn theme, archaic military mech walking in a swamp, ripples of water move, biomechanical man and a mech, smoking heap of a spaceship collision in the background, natural aura, light blue aura, black aura, sunset
+negprompt - easynegative, watermark, low quality, medium quality, blurry, censored, wrinkles, deformed, mutated text, watermark, low quality, medium quality, blurry, censored, wrinkles, deformed, mutated, embedding:easynegative
+no style
+
+out-1.png
+prompt - Film still cinematic photography, tilt angle, perfect composition, hyperdetailed forest, autumn theme, archaic military mech walking in a swamp, ripples of water move, biomechanical man and a mech, smoking heap of a spaceship collision in the background, natural aura, light blue aura, black aura, sunset
+negprompt - easynegative, watermark, low quality, medium quality, blurry, censored, wrinkles, deformed, mutated text, watermark, low quality, medium quality, blurry, censored, wrinkles, deformed, mutated, embedding:easynegative
+no style
+
+out-2.png
+prompt - Film still cinematic photography, tilt angle, perfect composition, hyperdetailed forest, autumn theme, archaic military mech walking in a swamp, ripples of water move, biomechanical man and a mech, smoking heap of a spaceship collision in the background, natural aura, light blue aura, black aura, sunset
+negprompt - easynegative, watermark, low quality, medium quality, blurry, censored, wrinkles, deformed, mutated text, watermark, low quality, medium quality, blurry, censored, wrinkles, deformed, mutated, embedding:easynegative
+cinematic
+
+out-3.png
+prompt - Man, futuristic armor, full body, deep Space, space armor suit, armor, style armor blu and red lights, gray and light blue metal chromed armor, red and blue lights, metal armor, diffusion lights on armor, smooth helmet, grey metal chromed armor, aggressive looking, epic helmet, aggressive helmet, Eva helmet, galaxy, city closed street background
+negprompt - Nude, deformation, asian space ship, repeating, red hair, red head, hallway, red armor, ironman, face, showing face, hair (showing hair: 2.0) tight suit, tits, boobs, red armor
+no style
+
+out-4.png
+prompt - Man, futuristic armor, full body, deep Space, space armor suit, armor, style armor blu and red lights, gray and light blue metal chromed armor, red and blue lights, metal armor, diffusion lights on armor, smooth helmet, grey metal chromed armor, aggressive looking, epic helmet, aggressive helmet, Eva helmet, galaxy, city closed street background
+negprompt - Nude, deformation, asian space ship, repeating, red hair, red head, hallway, red armor, ironman, face, showing face, hair (showing hair: 2.0) tight suit, tits, boobs, red armor
+cinematic
+
+out-5.png
+prompt - Man, futuristic armor, full body, deep Space, space armor suit, armor, style armor blu and red lights, gray and light blue metal chromed armor, red and blue lights, metal armor, diffusion lights on armor, smooth helmet, grey metal chromed armor, aggressive looking, epic helmet, aggressive helmet, Eva helmet, galaxy, city closed street background
+negprompt - Nude, deformation, asian space ship, repeating, red hair, red head, hallway, red armor, ironman, face, showing face, hair (showing hair: 2.0) tight suit, tits, boobs, red armor
+realistic
+
+out-6.png
+prompt - juicy burger, dark cinematic, Kodak RAW
+negprompt - clothes
+no style
+
+out-7.png
+prompt - circuitboard egyptian pyramid
+realistic
+
+out-8.png
+prompt - tilt-shift photography,<lora:citySDXL:1>,the photo shows urban scenery,
+tilt-shift photography of A fairy-tale town,extreme detail,unreal engine,octane render,natural light,halo effects,8k,wallpaper,
+photograph shot with Canon EOS 90D with Canon EF-S 18-135mm f-3.5-5.6 IS USM
+negprompt - ugly, deformed, noisy, blurry, low contrast, camera, blurry
+no style
+
+out-9.png
+prompt - tilt-shift photography,<lora:citySDXL:1>,the photo shows urban scenery, tilt-shift photography of A fairy-tale town,extreme detail,unreal engine,octane render,natural light,halo effects,8k,wallpaper, mayamaze, caveruinsAerial photograph shot with Canon EOS 90D with Canon EF-S 18-135mm f-3.5-5.6 IS USM,
+negprompt - ugly, deformed, noisy, blurry, low contrast, camera, blurry
+no style
+
+out-10.png
+prompt - tilt-shift photography,<lora:citySDXL:1>,the photo shows urban scenery, tilt-shift photography of A fairy-tale town,extreme detail,unreal engine,octane render,natural light,halo effects,8k,wallpaper, mayamaze, caveruinsAerial photograph shot with Canon EOS 90D with Canon EF-S 18-135mm f-3.5-5.6 IS USM,
+negprompt - ugly, deformed, noisy, blurry, low contrast, camera, blurry
+no style
+
+out-11.png
+prompt - A female futuristic astronaut explorer in white and orange suit, wandering in a dense Pandora forest
+no style
+
+out-12.png
+prompt - A female futuristic astronaut explorer in white and orange suit, wandering in a dense Pandora forest
+realistic
+
+out-13.png
+prompt - a cute small mouse with ginger fur. Adorable. Hufflepuff scarf, black and yellow stripes, Glasses. reading a book. chalk dust
+no style
+
+out-14.png
+prompt - landscape by Alena Aenami
+no style
+
+out-15.png
+prompt - a bored student girl on her laptop, on a desk, cozy room, headphones, large window, vibrant colors, lineart, Studio Ghibli
+no style
+
+out-16.png
+prompt - a bored student girl on her laptop, on a desk, cozy room, headphones, large window, vibrant colors, lineart, Studio Ghibli
+no style
+
+out-17.png
+prompt - a bored student girl on her laptop, on a desk, cozy room, headphones, large window, vibrant colors, lineart, Studio Ghibli
+anime
+
+out-18.png
+prompt - two students working on a laptop, cozy room, large window, vibrant colors, lineart
+no style
+
+out-19.png
+prompt - huge sacred European castle on the mountains, surrounded by many small villages, castles and mountains with many (waterfalls of different sizes),(the castle is composed of white brick walls), with gold paint on them, very gorgeous and noble, very complicated decoration, vegetation, blue sky, clouds floating in the mountains,birds flying, very clear, film level lighting, 4k, masterpiece,high resolution,Variegated color filter
+negprompt - ((worst quality:1.2), (low quality:1.2), mutated hands and fingers, bad anatomy, wrong anatomy, ugly, mutation:1.2),(worst quality, low quality:1.4), lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,lowres,watermark,Twisted and deformed bodies, twisted and deformed faces,badhandv4,ng_deepnegative_v1_75t, By bad artist -negNSFW
+no style
+
+out-20.png
+prompt - huge sacred European castle on the mountains, surrounded by many small villages, castles and mountains with many (waterfalls of different sizes),(the castle is composed of white brick walls), very gorgeous and noble, very complicated decoration, vegetation, blue sky, clouds floating in the mountains,birds flying, very clear, film level lighting, 4k, masterpiece,high resolution,Variegated color filter
+negprompt - ((worst quality:1.2), (low quality:1.2), mutated hands and fingers, bad anatomy, wrong anatomy, ugly, mutation:1.2),(worst quality, low quality:1.4), lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,lowres,watermark,Twisted and deformed bodies, twisted and deformed faces,badhandv4,ng_deepnegative_v1_75t, By bad artist -negNSFW
+realistic
+
+out-21.png
+prompt - huge sacred European castle on the mountains, surrounded by many small villages, castles and mountains with many (waterfalls of different sizes),(the castle is composed of white brick walls), very gorgeous and noble, very complicated decoration, vegetation, blue sky, clouds floating in the mountains,birds flying, very clear, film level lighting, 4k, masterpiece,high resolution,Variegated color filter
+negprompt - ((worst quality:1.2), (low quality:1.2), mutated hands and fingers, bad anatomy, wrong anatomy, ugly, mutation:1.2),(worst quality, low quality:1.4), lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,lowres,watermark,Twisted and deformed bodies, twisted and deformed faces,badhandv4,ng_deepnegative_v1_75t, By bad artist -negNSFW
+photography
+
+out-22.png
+prompt - professional close-up portrait photography of the face of a beautiful woman at baseball stadium during Twilight, Nikon Z9
+no style
+
+out-23.png
+prompt - cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy
+negprompt - anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,
+no style
+
+out-24.png
+prompt - cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy
+negprompt - anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,
+no style
+
+out-25.png
+prompt - cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy
+negprompt - anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,
+no style
+
+out-26.png
+prompt - cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy
+no style
+
+out-27.png
+prompt - glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy
+no style
+
+out-28.png
+prompt - professional close-up portrait photography of the face of a beautiful woman at baseball stadium during Twilight, Nikon Z9
+no style
+
+out-29.png
+prompt - professional close-up portrait photography of the face of a beautiful woman at baseball stadium during Twilight, Nikon Z9
+photography
+
+out-30.png
+prompt - professional close-up portrait photography of the face of a beautiful woman at baseball stadium during Twilight, Nikon Z9
+photography
+
+out-31.png
+prompt - professional close-up portrait photography of the face of a beautiful woman at baseball stadium during Twilight, Nikon Z9
+realistic
+
+out-32.png
+prompt - professional close-up portrait photography of the face of a beautiful woman in the mountains, Nikon Z9 photography
+no style
+
+out-33.png
+prompt - professional close-up portrait photography of the face of a beautiful woman in the mountains, winter scenery Nikon Z9 photography
+no style
+
+out-34.png
+prompt - professional close-up portrait photography of the face and shoulders of a beautiful woman in the mountains, winter scenery Nikon Z9
+no style
+
+out-35.png
+prompt - Pierre joubert, painting of a royal ship
+no style
+
+out-36.png
+prompt - Pierre joubert, painting of a royal ship
+no style
+
+out-37.png
+prompt - Painting of a royal ship
+no style
+
+out-38.png
+prompt - tilt-shift photography,the photo shows urban scenery, tilt-shift photography of A fairy-tale town,extreme detail,unreal engine,octane render,natural light,halo effects,8k,wallpaper, mayamaze, caveruinsAerial photograph shot with Canon EOS 90D with Canon EF-S 18-135mm f-3.5-5.6 IS USM,
+negprompt - ugly, deformed, noisy, blurry, low contrast, camera, blurry
+no style
+
+out-39.png
+prompt - photo of a city, the photo shows urban scenery, tilt-shift photography of town, extreme detail,octane render,natural light,halo effects,8k,wallpaper, mayamaze, caveruinsAerial photograph shot with Canon EOS 90D with Canon EF-S 18-135mm f-3.5-5.6 IS USM,
+negprompt - ugly, deformed, noisy, blurry, low contrast, camera, blurry
+no style
+
+out-40.png
+prompt - photo of a city, the photo shows urban scenery, tilt-shift photography of town, extreme detail,octane render,natural light,halo effects,8k,wallpaper, mayamaze, caveruinsAerial photograph shot with Canon EOS 90D with Canon EF-S 18-135mm f-3.5-5.6 IS USM,
+negprompt - ugly, deformed, noisy, blurry, low contrast, camera, blurry
+no style
+
+out-41.png
+prompt - photo of a city, the photo shows urban scenery, tilt-shift photography of town, extreme detail,octane render,natural light,halo effects,8k,wallpaper, mayamaze, caveruinsAerial photograph shot with Canon EOS 90D with Canon EF-S 18-135mm f-3.5-5.6 IS USM,
+negprompt - ugly, deformed, noisy, blurry, low contrast, camera, blurry
+no style
+
+out-42.png
+prompt - photo of a city, the photo shows urban scenery, tilt-shift photography of town, extreme detail,octane render,natural light,halo effects,8k,wallpaper, mayamaze, caveruinsAerial photograph shot with Canon EOS 90D with Canon EF-S 18-135mm f-3.5-5.6 IS USM,
+negprompt - ugly, deformed, noisy, blurry, low contrast, camera, blurry
+realistic
+
+out-43.png
+prompt - a photo of a high detailed pirate ship with skulls, god rays, gothic, (dark fantasy:2), volumetric lighting, shadows, in flames, burned, bow looks like skull with open jaw with fire
+negprompt - unrealistic, not detailed
+no style
+
+out-44.png
+prompt - Design a (((Chinese demon))) that embodies the intersection of malevolence and mystique. Its features include intricate horns, ethereal scales, and eyes aflame with otherworldly wisdom. Uncover its origins within ancient Chinese folklore or its place in the celestial hierarchy. Explore its motivations, whether driven by revenge, power, or redemption. Invite writers to infuse this character with cultural nuances, making it a complex figure that resonates with the rich tapestry of Chinese mythology
+negprompt - bad anatomy, poorly drawn face, out of frame, gibberish, lowres, lowres
+no style
+
+out-45.png
+prompt - Design a (((Chinese demon))) that embodies the intersection of malevolence and mystique. Its features include intricate horns, ethereal scales, and eyes aflame with otherworldly wisdom. Uncover its origins within ancient Chinese folklore or its place in the celestial hierarchy. Explore its motivations, whether driven by revenge, power, or redemption. Invite writers to infuse this character with cultural nuances, making it a complex figure that resonates with the rich tapestry of Chinese mythology
+negprompt - bad anatomy, poorly drawn face, out of frame, gibberish, lowres, lowres
+no style
+
+out-46.png
+prompt - Design a (((japaneese cat))) that embodies the intersection of malevolence and mystique. Its features include intricate horns, ethereal scales, and eyes aflame with otherworldly wisdom. Uncover its origins within ancient Chinese folklore or its place in the celestial hierarchy. Explore its motivations, whether driven by revenge, power, or redemption. Invite writers to infuse this character with cultural nuances, making it a complex figure that resonates with the rich tapestry of Chinese mythology
+negprompt - bad anatomy, poorly drawn face, out of frame, gibberish, lowres, lowres
+no style
+
+out-47.png
+prompt - spiral galaxy inside a glass jar, the jar stands on the kitchen table, high resolution, high detail
+no style
+
+out-48.png
+prompt - spiral galaxy inside a glass jar, the jar stands on the kitchen table, high resolution, high detail
+no style
+
+out-49.png
+prompt - hand drawn sketch illustration of a beautiful dragon earthen dragon, flowers moss, tree branches, dryad, symmetrical dragon horns, illustration, watercolor sketch, (best quality)), intricate detailed,
+negprompt - double ears,tattoos, plastic, octane render, text, writing, ugly, deformed, simultaneous, bad lighting, blurry, text, watermark, plastic, 3d, cartoon, monochromatic, low quality
+no style
+
+out-50.png
+prompt - (dark magic), (grim),focus on a cat, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, dramatic atmosphere, atmospheric perspective
+no style
+
+out-51.png
+prompt - (dark magic), (grim),focus on a cat, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, dramatic atmosphere, atmospheric perspective
+no style
+
+out-52.png
+prompt - focus on a cat, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, atmospheric perspective
+realistic
+
+out-53.png
+prompt - focus on a cat, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, atmospheric perspective
+no style
+
+out-54.png
+prompt - focus on a cat, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, atmospheric perspective
+no style
+
+out-55.png
+prompt - focus on a cat, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, atmospheric perspective
+no style
+
+out-56.png
+prompt - focus on a dog, german shepard, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, atmospheric perspective
+no style
+
+out-57.png
+prompt - Full bosy samurai character, Celestial, spiral, (volcanic brilliance), (a revolutionary union of Renaissance Pyrography, Lava Leviathan), wood grains of history, molten horse:3.0 alchemist:0.3, obsidian protector:0.9, burnt forest tapestries, flame-touched:2.2, charred semblance, igneous etch marks, (rust and magma reds:1.7), fiery shades, ember-enchanter, alt_burn, liquid gold glow, ultraviolet lens technique, wood char emphasis, cyanotype process, acrylic fusion, bokeh spread lens, 20k inferno, zenith's fierce glow, ember-illuminated, cavernous contrast, heat haze allure. Sculpted in the atmospheric realms of Ian McQue and finessed by Jama Jurabaev, this artwork radiates warmth and history, commanding profound introspection. 
+negprompt - tiling,  poorly drawn hands,  poorly drawn feet,  poorly drawn face,  out of frame,  extra limbs,  body out of frame,  blurry,  bad anatomy,  blurred,  watermark,  grainy,  signature,  cut off,  draft,   text,  logo
+no style
+
+out-58.png
+prompt - Full bosy samurai character, Celestial, spiral, (volcanic brilliance), (a revolutionary union of Renaissance Pyrography, Lava Leviathan), wood grains of history, molten horse:3.0 alchemist:0.3, obsidian protector:0.9, burnt forest tapestries, flame-touched:2.2, charred semblance, igneous etch marks, (rust and magma reds:1.7), fiery shades, ember-enchanter, alt_burn, liquid gold glow, ultraviolet lens technique, wood char emphasis, cyanotype process, acrylic fusion, bokeh spread lens, 20k inferno, zenith's fierce glow, ember-illuminated, cavernous contrast, heat haze allure. Sculpted in the atmospheric realms of Ian McQue and finessed by Jama Jurabaev, this artwork radiates warmth and history, commanding profound introspection. 
+negprompt - tiling,  poorly drawn hands,  poorly drawn feet,  poorly drawn face,  out of frame,  extra limbs,  body out of frame,  blurry,  bad anatomy,  blurred,  watermark,  grainy,  signature,  cut off,  draft,   text,  logo
+no style
+
+out-59.png
+prompt - a sumurai in a red armor
+negprompt - tiling,  poorly drawn hands,  poorly drawn feet,  poorly drawn face,  out of frame,  extra limbs,  body out of frame,  blurry,  bad anatomy,  blurred,  watermark,  grainy,  signature,  cut off,  draft,   text,  logo
+no style
+
+out-60.png
+prompt -  pikachu themed birthday cake, yellow and brown colors, game icon, professional, high quality, super cute, kawaii, 8k, adorable
+negprompt - low quality, blurry, deformed distorted
+no style
+
+out-61.png
+prompt - a birthday cake pikachu themed, yellow and brown colors, professional, high quality, super cute, kawaii, 8k, adorable, on a table
+negprompt - low quality, blurry, deformed distorted
+no style
+
+out-62.png
+prompt - Cute dog wearing large sunglasses, looking to camera, in a circle, colorful, ink drops, ink circles, coffee stains, digital art, 8k, kawaii
+no style
+
+out-63.png
+prompt - Cute dog wearing large sunglasses, looking to camera, in a circle, colorful, ink drops, ink circles, coffee stains, digital art, 8k, kawaii
+no style
+
+out-64.png
+prompt - Cute husky dog wearing large sunglasses, looking to camera, in a circle, colorful, ink drops, ink circles, coffee stains, digital art, 8k, kawaii
+no style
+
+out-65.png
+prompt - Cute corgi dog wearing large sunglasses, looking to camera, in a circle, colorful, ink drops, ink circles, coffee stains, digital art, 8k, kawaii
+no style
+
+out-66.png
+prompt - Close up, a transparent shell of a glowing octopus in the depths of a glowing alien ocean, 8K ultra high definition, the winner of the competition,
+no style
+
+out-67.png
+prompt - Close up, a transparent shell of a glowing octopus in the depths of a glowing alien ocean, 8K ultra high definition, the winner of the competition,
+no style
+
+out-68.png
+prompt - Elon Musk as a Jedi, holding a purple lightsaber ((beautiful hands, beautiful eyes, beautiful skin, perfect anatomy, good lighting, good grip of the lightsaber, detailed))
+negprompt - 3d, cartoon, ugly face, deformed, missing digits, extra digits, bad eyes, Watermark, Text, censored, deformed, bad anatomy, disfigured, poorly drawn face, mutated, extra limb, ugly, poorly drawn hands, missing limb, floating limbs, disconnected limbs, disconnected head, malformed hands, long neck, mutated hands and fingers, bad hands, missing fingers, cropped, worst quality, low quality, mutation, poorly drawn, huge calf, bad hands, fused hand, missing hand, disappearing arms, disappearing thigh, disappearing calf, disappearing legs, missing fingers, fused fingers, abnormal eye proportion, Abnormal hands, abnormal legs, abnormal feet,  abnormal fingers, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry
+no style
+
+out-69.png
+prompt - silhouette style Triumphant against the elements, the athlete conquers the precipitous cliffside of Taroko Gorge, Taiwan. Majestic mountains pierce the heavens, while the swirling mist and fog envelop the rugged terrain, lending an air of mystery and intrigue. The woman, agile and assured, tackles the arduous climb with unwavering determination. A sense of drama permeates the scene, as she disappears briefly into the dense cloud cover, only to emerge stronger and more resolute. This award-winning landscape photograph embodies the spirit of adventure, inviting the viewer to explore the remote beauty of this natural wonder. . high contrast, minimalistic, black and white, stark, dramatic
+negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic, 
+long neck, asymmetrical eyes, signature, watermark,
+no style
+
+out-70.png
+prompt - one men on a path surrounded by a desert, the path is leading to a city 
+negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic,  long neck, asymmetrical eyes, signature, watermark,
+realistic
+
+out-71.png
+prompt - one men on a path surrounded by a desert, the path is leading to a city 
+negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic,  long neck, asymmetrical eyes, signature, watermark,
+no style
+
+out-72.png
+prompt - one men on a path surrounded by a desert, the path is leading to a city, diuna movie style
+negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic,  long neck, asymmetrical eyes, signature, watermark,
+no style
+
+out-73.png
+prompt - one men on a path surrounded by a desert, the path is leading to a city, diuna movie style
+negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic,  long neck, asymmetrical eyes, signature, watermark,
+no style
+
+out-74.png
+prompt - a city on mars from the distance, the city is surrounded by a dome
+negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic,  long neck, asymmetrical eyes, signature, watermark,
+no style
+
+out-75.png
+prompt - a view from the inside of a martian city, 8k hdr
+negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic,  long neck, asymmetrical eyes, signature, watermark,
+no style
+
+out-76.png
+prompt - ginger hair, blue eyes, cute little girl, 1girl, full body, puffy heart on dress, pink Colorful dress with white cat ears, rustic background, standing
+negprompt - (worst quality, low quality:1.4), text, title, logo, signature
+no style
+
+out-77.png
+prompt - ginger hair, blue eyes, cute little girl, 1girl, full body, puffy heart on dress, pink Colorful dress with white cat ears, rustic background, standing, anime lines
+negprompt - (worst quality, low quality:1.4), text, title, logo, signature
+no style
+
+out-78.png
+prompt - ginger hair, blue eyes, cute little girl, 1girl, full body, puffy heart on dress, pink Colorful dress with white cat ears, rustic background, standing, anime lines
+negprompt - (worst quality, low quality:1.4), text, title, logo, signature
+no style
+
+out-79.png
+prompt - Photo of artistic stone cup with 3D carvings, little mause theme with forest background, decorated with amber accents, masterpiece of art, visually stunning, intricate details, sharp focus, 55mm f/ 1.8 lens, depth of field, natural daylight
+negprompt - blurry, painting, drawing, sketch, cartoon, anime, manga, render, CG, 3d, watermark, signature, label, (worst quality, low quality, normal quality:2),
+no style
+
+out-80.png
+prompt - Photo of artistic stone vase with 3D carvings, little mause theme with forest background, decorated with amber accents, masterpiece of art, visually stunning, intricate details, sharp focus, 55mm f/ 1.8 lens, depth of field, natural daylight
+negprompt - blurry, painting, drawing, sketch, cartoon, anime, manga, render, CG, 3d, watermark, signature, label, (worst quality, low quality, normal quality:2),
+no style
+
+out-81.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-82.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-83.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-84.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-85.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-86.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-87.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-88.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-89.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-90.png
+prompt - by Guy Davis and Syd Mead, calmness, serenity,  wide angle,  hyper detailed, anime poster art, bold lines, award winning,  trending on ArtStation , (intricate details, masterpiece, best quality:1.4), looking at viewer, dynamic pose in the style of nicola samori 
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-91.png
+prompt - score_9, score_8_up, 1girl, queen, bent over towards viewer, throne room, royal red dress, white gloves, legs crossed, solo, long hair, blonde hair, mid parted hair, heart, curvy, high heels, golden tiara, solo, hand to mouth 
+negprompt - score_6, score_5, score_4, pubic hair, pony, gaping, muscular, makeup, censored, furry, child, kid, chibi, teen
+no style
+
+out-92.png
+prompt - score_9, score_8_up, 1girl, queen, bent over towards viewer, throne room, royal red dress, white gloves, legs crossed, solo, long hair, blonde hair, mid parted hair, heart, curvy, high heels, golden tiara, solo, hand to mouth 
+negprompt - score_6, score_5, score_4, pubic hair, pony, gaping, muscular, makeup, censored, furry, child, kid, chibi, teen
+no style
+
+out-93.png
+prompt - Tiny cute ninja toy, standing character, soft smooth lighting, soft pastel colors, skottie young, 3d blender render, polycount, modular constructivism, pop surrealism, physically based rendering, square image
+negprompt - worst quality, low quality, normal quality, lowres, low details
+no style
+
+out-94.png
+prompt - Tiny cute ninja toy, standing character, soft smooth lighting, soft pastel colors, skottie young, 3d blender render, polycount, modular constructivism, pop surrealism, physically based rendering, square image
+negprompt - worst quality, low quality, normal quality, lowres, low details
+no style
+
+out-95.png
+prompt - Tiny cute anime toy, standing character, soft smooth lighting, soft pastel colors, skottie young, 3d blender render, polycount, modular constructivism, pop surrealism, physically based rendering, square image
+negprompt - worst quality, low quality, normal quality, lowres, low details
+no style
+
+out-96.png
+prompt - Tiny cute anime toy, standing character, soft smooth lighting, soft pastel colors, skottie young, 3d blender render, polycount, modular constructivism, pop surrealism, physically based rendering, square image
+negprompt - worst quality, low quality, normal quality, lowres, low details
+no style
+
+out-97.png
+prompt - masterpiece, best quality, highres, aahuang, long hair, twintails, hair ribbon, small breasts, school uniform, white dress, detached sleeves, standing, cowboy shot, outdoors, smile, open mouth, leaning forward, arms behind back, cherry blossoms, looking at viewer
+negprompt - EasyNegative, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, (worst quality:1.2), low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, lowres graffiti, (low quality lowres simple background:1.1), (holding:1.5),
+no style
+
+out-98.png
+prompt - by Eugene Galien-Laloue and Bruce Pennington,  (arctic , unusual , masterful:1.4), poster art, bold lines, hyper detailed, expressive,  award winning,  (landscape:1.4), (intricate details, masterpiece, best quality:1.4), studio lighting , looking at viewer, dynamic pose, wide angle view,
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-99.png
+prompt - by Eugene Galien-Laloue and Bruce Pennington,  (arctic , unusual , masterful:1.4), poster art, bold lines, hyper detailed, expressive,  award winning,  (landscape:1.4), (intricate details, masterpiece, best quality:1.4), studio lighting , looking at viewer, dynamic pose, wide angle view,
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-100.png
+prompt - by Eugene Galien-Laloue and Bruce Pennington,  (arctic , unusual , masterful:1.4), poster art, bold lines, hyper detailed, expressive,  award winning,  (landscape:1.4), (intricate details, masterpiece, best quality:1.4), studio lighting , looking at viewer, dynamic pose, wide angle view,
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-101.png
+prompt - amazing quality, masterpiece, best quality, hyper detailed, ultra detailed, UHD, HDR, DOF, depth of field, wide-angle lens, detail eyes, Minions, solo,  full body, holding sword, glowing sword, wearing ornate (yellow hybrid blue) armor, hand up, (fighting stance:1.2), cute, kawaii, (castle | temple | forest | mountain top | city | village | wilderness | snow land), dynamic and vivid colors, fascinating, gorgeous sky, shiny dust, wind blows,  extremely detailed,
+negprompt - FastNegativeV2, watermark, signature, worst quality, low quality, normal quality, lowres, simple background, inaccurate limb, extra fingers, fewer fingers, missing fingers, extra arms, (extra legs:1.3), inaccurate eyes, bad composition, bad anatomy, error, extra digit, fewer digits, cropped, low res, worst quality, low quality, normal quality, jpeg artifacts, extra digit, fewer digits, trademark, watermark, artist's name, username, signature, text, words,
+no style
+
+out-102.png
+prompt - amazing quality, masterpiece, best quality, hyper detailed, ultra detailed, UHD, HDR, DOF, depth of field, wide-angle lens, detail eyes, Minions, solo,  full body, hand up, (fighting stance:1.2), cute, kawaii, dynamic and vivid colors, fascinating, gorgeous sky, shiny dust, wind blows,  extremely detailed,
+negprompt - FastNegativeV2, watermark, signature, worst quality, low quality, normal quality, lowres, simple background, inaccurate limb, extra fingers, fewer fingers, missing fingers, extra arms, (extra legs:1.3), inaccurate eyes, bad composition, bad anatomy, error, extra digit, fewer digits, cropped, low res, worst quality, low quality, normal quality, jpeg artifacts, extra digit, fewer digits, trademark, watermark, artist's name, username, signature, text, words,
+no style
+
+out-103.png
+prompt - candid view, car chase, epic, action, cinematic, motion trails, colored inked, comics, graphic novel illustration, flat colors, highly detailed, large gradient, paper texture, go pro, color graded illustration, comics page
+negprompt - boring, static, photography, bad perspective
+no style
+
+out-104.png
+prompt - candid view, car chase, epic, action, cinematic, motion trails, colored inked, comics, graphic novel illustration, flat colors, highly detailed, large gradient, paper texture, go pro, color graded illustration, comics page
+negprompt - boring, static, photography, bad perspective
+no style
+
+out-105.png
+prompt - female, red under eye, under eye makeup, white eyes, white eyes, white eyelashes, blue hair, blue hair, flowing hair, flowing hair, glowing hair, glowing hair, while sharks, whale sharks, underwater, underwater, stoic face, calm face, beautiful, pretty, white dress, white dress, flowing dress, stars, stars in hair, pretty, shaded, glowing, glowing beautiful shading, glowing, under water, floating, floating
+negprompt - bad quality, bad anatomy, worst quality, low quality, low resolution, extra fingers, blur, blurry, ugly, wrong proportions, watermark, image artifacts, lowres, jpeg artifacts, deformed, noisy image, deformation, corrupt image
+no style
+
+out-106.png
+prompt - ((pixelart)), a picture of an old car, night city on the background, (8k, RAW photo, best quality, masterpiece:1.2), trending on artstation, videogame art, 
+no style
+
+out-107.png
+prompt - ((pixelart)), a picture of an old car, night city on the background, (8k, RAW photo, best quality, masterpiece:1.2), trending on artstation, videogame art, 
+no style
+
+out-108.png
+prompt - pixelart, 64 bit, a kitten pouncing, backyard in the background
+no style
+
+out-109.png
+prompt - highly detailed isometric pixelart close-up transformer bumblebee robot,  white background, eboy style
+no style
+
+out-110.png
+prompt - highly detailed isometric pixelart close-up of a harbor, eboy style
+no style
+
+out-111.png
+prompt - highly detailed isometric pixelart close-up of a city located next to a beach, eboy style
+no style
+
+out-112.png
+prompt - Double Exposure Style,Volumetric Lighting, a girl side view portrait, light depth, dramatic atmospheric lighting,Volumetric Lighting, double image ghost effect, image combination, double exposure style, background lightly brushed with the image of a futuristic city buildings
+negprompt - blurry, worst quality
+no style
+
+out-113.png
+prompt - (analog photo) of a chimp wearing a black suit with a white shirt and black necktie and wearing black Rayban style sunglasses , full body,, masterpiece, Fine art photography, award winning photography
+negprompt - bowtie, human, illustration, drawing, painting, sketch, 3D, render, manga, child, childlike  grey scale
+no style
+
+out-114.png
+prompt - film noir style, retro, chiaroscuro, photo of  a (complex architectural science fiction structure:1.4) by Apollonia Saintclair and Nicolas Delort and Alex Garant,  (illuminated , golden , masterful:1.4), bold lines, hyper detailed, award winning,  UHD, monochrome color palette, greyscale, high contrast, depth of field, black and white hue, (intricate details, masterpiece, best quality:1.4), extremely dramatic lighting with deep shadows, looking at viewer, dynamic pose, wide angle view,
+negprompt - (worst quality, greyscale),  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck, grey scale
+no style
+
+out-115.png
+prompt - midnight, night street in town, deserted lane, fantasy, mystic, Realistic, Twilight, Dusky, Shadowy, Mysterious, 16K, 32K, UHD, absurdres, ultra-high resolution, 15K, 3D, Photographic Realism, Land Art, Romantic Landscape, atmospheric, Halcyo, Dreamy, Serene, Tranquil, Quaint Comfy, Hygge, Homely, Euphoric, Enchanting, Romantic, Arcane, Sorcerous, Miraculous, Bewitching, Mesmerizing, Dramatic lighting, Streetwise, Vintage, Antique, Haunting, Spiritual, Transcendent, Decima engine, Perfectly Focused, Complete Sharpness, Depth of Field, Evenly Focused, Full Depth, Sharp Focus, Phenomenal Masterwork, Work of Art, intricate details, vibrant, Opalescent colors, Breathtaking, Virtuoso, Carefully Designed, Artistic, Masterful, Perfectly Crafted, Refined, Screen Space Ambient Occlusion, Anisotropic Filtering, Depth Peeling, Environment Lighting, Atmospheric Scattering, Distortion, Global Illumination, Volumetric Lighting, Bloom, HDR, Compositing, Virtual Texturing, Post-Processing Effects, Procedural Generation, Procedural Texturing, Parallax Mapping, NPR Hatching, Physically-Based Rendering, Dynamic Weather Systems, Real-Time Reflections
+negprompt - embedding:AC_Neg1, embedding:ImgFixerPre0.3, embedding:unaestheticXL_Alb2, (Asian:1.2), Chinese, (anime:1.2), second moon, extra moon, cartoon, illustration, (worst quality:1.5), (low quality:1.5), (normal quality:1.5),
+no style
+
+out-116.png
+prompt -  inspired by michael bay and syd mead, retrofuturism, a cinematic film still of a futuristic megacity, towering skyscrapers, sunset, (ornate bridges:1.1), dynamic composition, blade runner 2049 aesthetics, gradient sky, high quality photography, schneider super cinelux, sharp focus, award winning photo, 80mm, f2.8, ultra detailed, ultra high resolution, hdr, 8k, uhd
+negprompt -ng-unaesthetic-xl_alb2, ng-zip2d-xl
+no style
+
+out-117.png
+prompt -  inspired by michael bay and syd mead, retrofuturism, a cinematic film still of a futuristic megacity, towering skyscrapers, sunset, (ornate bridges:1.1), dynamic composition, blade runner 2049 aesthetics, gradient sky, high quality photography, schneider super cinelux, sharp focus, award winning photo, 80mm, f2.8, ultra detailed, ultra high resolution, hdr, 8k, uhd
+negprompt -ng-unaesthetic-xl_alb2, ng-zip2d-xl
+no style
+
+out-118.png
+prompt - (The colonial city of the future, in the mist-filled Grand Canyon, on an unknown Earth-like planet, 2 moon on sky, Spaceship flight connects colonies:1.3), (Richard Meier:1.2), (Mario Botta:1.3), (avant-garde, future, reality, science fiction, photorealistic), (modern architecture:1.2),  (Large Files, Ultra Realistic, 8K, 16k, FHD, HD, VFX, Perfect, Photography, composition, Architecture Sales Photography, Architecture Competition, Ultra High Resolution, Cinematography, High Resolution Image:1.1), (dramatic lighting, direct sunlight, ray tracing, clear shadow:1.2),  (real landscape:1.1), (blurred background:1.0), (urban background, more_details) , ac_neg1, great lighting, clear, frames, cliffbuilding
+negprompt - cartoon, painting, illustration, (worst quality, low quality, normal quality:1.8), (grayscale, teen:1.4)
+no style
+
+out-119.png
+prompt - (futuristic:1.5) a huge military factory made of steel, glass, fog, sun, in the clouds, , futuristic military planes, moody tones, old book style ink cover illustration, on parchment,  (real landscape:1.1), (blurred background:1.0), [buildings|BREAK|trees|BREAK|Crowd|buildings|BREAK|trees|BREAK|Crowd|buildings|BREAK|trees|BREAK|Crowd:0.7], (background, more_details:0.3)  great lighting, clear, futureskyline
+negprompt - (worst quality, greyscale), ac_neg2, zip2d_neg,  ziprealism_neg,  watermark, username, signature, text, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, bad feet, extra fingers, mutated hands, poorly drawn hands, bad proportions, extra limbs, disfigured, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck
+no style
+
+out-120.png
+prompt - cyberpunk, concept art, crowded street, background is night city, neon-lit, at Twilight, Depth of field 270mm, Technicolor, synthwave, neon hue, shadowrun
+negprompt - character sheet, moody, monochromatic, washed out, natural, rustic, primitive, organic, simplistic, photograph, realism, photorealism, modern, ordinary, mundane, BREAK easynegative, low contrast, monochrome
+no style
+
+out-121.png
+prompt - a nighttime urban race with neon lights illuminating the track and surrounding buildings. The cars could be shown swerving around corners, with glowing brake lights and exhaust flames adding to the intensity of the scene
+no style
+
+out-122.png
+prompt - colombia, train on the tracks, surrounded by flowers, on top green grass, river, in the style of cute cartoonish designs, dreamlike visuals, soft sculptures, webcam, bright colors, bold shapes, coastal landscapes, capturing moments, soft color, matte color, Ghibli style
+negprompt - blurry, worst quality, text, logo
+no style
+
+out-123.png
+prompt - gfsqm, tree, scenery, mountain,night, reflection, sky, outdoors, night sky, full moon, mountain, moonlight
+negprompt - nsfw, ng_deepnegative_v1_75t,badhandv4, (worst quality:2), (low quality:2), (normal quality:2), lowres,watermark, monochrome,nsfw
+no style
+
+out-124.png
+prompt - gfsqm, tree, scenery, mountain,night, reflection, sky, outdoors, night sky, full moon, mountain, moonlight
+negprompt - nsfw, ng_deepnegative_v1_75t,badhandv4, (worst quality:2), (low quality:2), (normal quality:2), lowres,watermark, monochrome,nsfw
+no style
+
+out-125.png
+prompt - a photo a fleet of alien ships coming through a rift in the sky over New York city, cinematic composition, cinematic lighting
+negprompt - illustration, drawing, painting, sketch, 3D, render, manga, child, childlike
+no style
+
+out-126.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+no style
+
+out-127.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+no style
+
+out-128.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+no style
+
+out-129.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+no style
+
+out-130.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+no style
+
+out-131.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+no style
+
+out-132.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+cinematic
+
+out-133.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+no style
+
+out-134.png
+prompt - people standing, outdoors, ,(masterpiece),(detailed),(intricate details),(realistic, photo-realistic:1.37),illustration,an extremely delicate and beautiful,8k wallpaper,absurdres,incredibly absurdres,ultra-detailed,highres,extremely detailed,
+negprompt - EasyNegativeV2,  bad-hands-5, By bad artist -neg, ((navel piercing,nail polish,mole)),(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale))
+no style
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,6 +8,7 @@ html {
     --navHeight: 60px;
     font-family: "Montserrat", sans-serif;
     background-color: aliceblue;
+    scroll-behavior: smooth;
 }
 
 /* navigation bar*/
@@ -20,7 +21,9 @@ nav {
     height: var(--navHeight);
     width: 100%;
     background-color: #ffffff;
+    box-shadow: 0 0 10px 0 grey;
     transition: 0.3s;
+    z-index: 1;
 }
 nav.scrolled {
     height: calc(var(--navHeight) * 1.2);
@@ -31,9 +34,7 @@ nav img.scrolled {
 nav div a.scrolled {
     font-size: 1.2rem;
 }
-nav a {
-    position: relative;
-}
+
 nav img {
     height: calc(var(--navHeight) * 0.6);
     position: absolute;
@@ -50,6 +51,7 @@ nav div {
 }
 nav a {
     display: flex;
+    position: relative;
     align-items: center;
     margin: 0px 5px;
     padding: 10px 20px;
@@ -64,14 +66,16 @@ nav div a:hover {
 
 /* main page */
 #wrapper{
-    /* max-width: 1200px; */
-    height: 200vh;
     margin: auto;
 }
 
 .slogan{
-    margin: 300px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 100vh;
 }
 
 h1{
@@ -80,23 +84,40 @@ h1{
 h2{
     font-size: 2rem;
 }
+
+.slogan a{
+    display: inline-block;
+    margin: 30px 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid;
+    transition: 0.5s;
+}
+
+.slogan a:hover{
+    background-color: #00c2ff;
+}
+
 .carousel div{
     display: flex;
     position: relative;
-    height: 180px;
+    height: 240px;
     overflow: hidden;
 }
 .carousel img{
     position: absolute;
     left: 0px;
-    height: 180px;
-    margin: 10px 5px;
+    margin: 5px 5px;
 }
-.carousel .firstLine img, .carousel .thirdLine img{
+.carousel .firstLine img{
     animation: anim 1000000s linear ;
 }
 .carousel .secondLine img{
     animation: anim 500000s linear ;
+}
+.carousel .thirdLine img{
+    animation: anim 750000s linear ;
 }
 
 
@@ -105,4 +126,22 @@ h2{
 }
 
 
+/* Image Generator */
 
+
+.flex{
+    display: flex;
+    margin-top: var(--navHeight);
+}
+
+.settings{
+    background-color: beige;
+    height: 1000px;
+    flex-basis: 300px;
+    flex-shrink: 0;
+}
+.output{
+    background-color: bisque;
+    height: 1000px;
+    flex-basis: 100%;
+}

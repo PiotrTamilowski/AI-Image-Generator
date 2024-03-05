@@ -8,30 +8,30 @@ class img {
     }
 }
 
-const firstRowImages = [new img("images/009b0f1f-66ee-4c30-b635-add75670a570_0.png"), new img("images/23e9bc6a-048c-48a1-b3e6-f8a604f01ded_0.png"), new img("images/64531de3-33dc-4231-afb6-828dc9b63108_0.png"), new img("images/686cf664-de18-4a22-807f-06f492bd9b92_0.png"), new img("images/a2575a4e-3a21-4bb2-a10c-00283f884169_0.png")];
-const secondRowImages = [new img("images/009b0f1f-66ee-4c30-b635-add75670a570_0.png"), new img("images/23e9bc6a-048c-48a1-b3e6-f8a604f01ded_0.png"), new img("images/64531de3-33dc-4231-afb6-828dc9b63108_0.png"), new img("images/686cf664-de18-4a22-807f-06f492bd9b92_0.png"), new img("images/a2575a4e-3a21-4bb2-a10c-00283f884169_0.png")];
-const thirdRowImages = [new img("images/009b0f1f-66ee-4c30-b635-add75670a570_0.png"), new img("images/23e9bc6a-048c-48a1-b3e6-f8a604f01ded_0.png"), new img("images/64531de3-33dc-4231-afb6-828dc9b63108_0.png"), new img("images/686cf664-de18-4a22-807f-06f492bd9b92_0.png"), new img("images/a2575a4e-3a21-4bb2-a10c-00283f884169_0.png")];
+const firstRowImages = [new img("images/1.png"), new img("images/9.png"), new img("images/16.png"), new img("images/22.png"), new img("images/25.png"), new img("images/96.png"), new img("images/113.png"), new img("images/122.png")];
+const secondRowImages = [new img("images/37.png"), new img("images/44.png"), new img("images/3.png"), new img("images/61.png"), new img("images/59.png"), new img("images/112.png"), new img("images/108.png"), new img("images/118.png")];
+const thirdRowImages = [new img("images/68.png"), new img("images/47.png"), new img("images/51.png"), new img("images/64.png"), new img("images/121.png"), new img("images/110.png"), new img("images/105.png"), new img("images/13.png")];
 
-/* start */ 
-for(let i = 0; i < 6; i++){
+/* start */
+for (let i = 0; i < 6; i++) {
     checkHowManyImages();
 }
 
-// this function adds images to the carousel. It needs two arguments: array and container (parent element to which images will be added) 
+// this function adds images to the carousel. It needs two arguments: array and container (parent element to which images will be added)
 function addElements(arr, container) {
-    arr.forEach(item => {
+    arr.forEach((item) => {
         const newImg = document.createElement("img");
         newImg.src = item.src;
-     
-        if(document.querySelectorAll(`.carousel .${container.getAttribute("class")} img:last-of-type`).length == 0){
-            newImg.style.left = "0px"
-            newImg.style.width = "180px"
+
+        if (document.querySelectorAll(`.carousel .${container.getAttribute("class")} img:last-of-type`).length == 0) {
+            newImg.style.left = "0px";
+            newImg.style.width = "240px";
         } else {
-            newImg.style.left = (document.querySelector(`.carousel .${container.getAttribute("class")} img:last-of-type`).getBoundingClientRect().right + "px")
-            newImg.style.width = "180px"
+            newImg.style.left = document.querySelector(`.carousel .${container.getAttribute("class")} img:last-of-type`).getBoundingClientRect().right + "px";
+            newImg.style.width = "240px";
         }
         container.appendChild(newImg);
-    })
+    });
 }
 
 // this function checks how many images are in a row, if there is less than 30, this functions calls addElements function

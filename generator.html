@@ -21,17 +21,18 @@
             <div>
                 <a href="generator.html">Generator Obrazów</a>
                 <a href="#">Galeria</a>
-                <a href="#">Ulubione</a>
+                <a href="#"> Ulubione</a>
             </div>
         </nav>
+
         <div id="wrapper">
             <div class="flex">
                 <form class="settings">
                     <label for="prompt">Polecenie</label>
-                    <textarea id="prompt" maxlength="1000" rows="10" placeholder="Wprowadź opis obrazu, który ma zostać wygenerowany, użyj języka angielskiego" required></textarea>
+                    <textarea id="prompt" maxlength="1000" rows="10" placeholder="Wprowadź opis obrazu, który ma zostać wygenerowany. Użyj języka angielskiego" required></textarea>
 
-                    <label for="negprompt">Negatywne polecenie</i></label>
-                    <textarea id="negprompt" maxlength="1000" rows="10" placeholder="Wprowadź właściwości obrazu, których generator ma unikać"></textarea>
+                    <label for="negprompt">Negatywne polecenie</label>
+                    <textarea id="negprompt" maxlength="1000" rows="10" placeholder="Wprowadź właściwości obrazu, których generator ma unikać. Uzyj języka angielskiego"></textarea>
 
                     <label for="aspectRatio">Wymiar</label>
                     <select id="aspectRatio">
@@ -48,8 +49,8 @@
 
                     <label for="style">Styl</label>
                     <select id="style">
-                        <option default>Bez stylu</option>
-                        <option value="enhance">Eenhance</option>
+                        <option value="no style" default>Bez stylu</option>
+                        <option value="enhance">Enhance</option>
                         <option value="anime">Anime</option>
                         <option value="photographic">Photographic</option>
                         <option value="digital-art">Digital-art</option>
@@ -73,22 +74,21 @@
 
                     <label for="steps">Liczba kroków <i class="fa-solid fa-question" title="Wieksza liczba kroków może przyczynić się do lepszej jakości wygenerowanego obrazu, ale także wydłuża czas oczekiwania. Min: 10, Max: 100"></i></label>
                     <input type="number" id="steps" min="10" max="100" value="50" />
-                    
+
                     <div class="safefilterContainer">
                         <label for="safefilter">Bezpieczny filtr</label>
-                        <input type="checkbox" id="safefilter" checked />
+                        <input type="checkbox" id="safeFilter" checked />
                     </div>
-                    
+
                     <button id="generate">Generuj</button>
                 </form>
-
+                    
                 <div class="output">
-                    <div>
-                        
-                    </div>
+                    <img class="generatedImg" src="" alt="">
                 </div>
             </div>
         </div>
         <script src="js/nav.js"></script>
+        <script src="js/imageGeneration.js"></script>
     </body>
 </html>

@@ -65,11 +65,11 @@ nav div a:hover {
 }
 
 /* main page */
-#wrapper{
+#wrapper {
     margin: auto;
 }
 
-.slogan{
+.slogan {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,14 +78,14 @@ nav div a:hover {
     height: 100vh;
 }
 
-h1{
+h1 {
     font-size: 4rem;
 }
-h2{
+h2 {
     font-size: 2rem;
 }
 
-.slogan a{
+.slogan a {
     display: inline-block;
     margin: 30px 10px 0;
     padding: 10px 20px;
@@ -95,41 +95,40 @@ h2{
     transition: 0.5s;
 }
 
-.slogan a:hover{
+.slogan a:hover {
     background-color: #00c2ff;
 }
 
-.carousel div{
+.carousel div {
     display: flex;
     position: relative;
     height: 240px;
     overflow: hidden;
 }
-.carousel img{
+.carousel img {
     position: absolute;
     left: 0px;
     margin: 5px 5px;
 }
-.carousel .firstLine img{
-    animation: anim 1000000s linear ;
+.carousel .firstLine img {
+    animation: anim 1000000s linear;
 }
-.carousel .secondLine img{
-    animation: anim 500000s linear ;
+.carousel .secondLine img {
+    animation: anim 500000s linear;
 }
-.carousel .thirdLine img{
-    animation: anim 750000s linear ;
-}
-
-
-@keyframes anim{
-    to{transform: translateX(-10000000px)}
+.carousel .thirdLine img {
+    animation: anim 750000s linear;
 }
 
+@keyframes anim {
+    to {
+        transform: translateX(-10000000px);
+    }
+}
 
 /* Image Generator */
 
-
-.flex{
+.flex {
     display: flex;
     margin-top: var(--navHeight);
     border-bottom: 3px solid #d9d9d9;
@@ -137,19 +136,19 @@ h2{
 
 /* Left side of the screen */
 
-.settings{
+.settings {
     flex-basis: 300px;
     flex-shrink: 0;
     padding: 10px;
     border-right: 3px solid #d9d9d9;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     min-height: calc(100vh - var(--navHeight));
 }
 
-i.fa-question{
+i.fa-question {
     border: 1px solid black;
     border-radius: 50%;
     padding: 2px 5px;
@@ -159,76 +158,86 @@ i.fa-question{
     cursor: help;
 }
 
-label{
-    margin: 10px 0 5px; 
+label {
+    margin: 10px 0 5px;
 }
 
-textarea, select, input, button{
+textarea,
+select,
+input,
+button {
     padding: 8px;
     border-radius: 10px;
 }
 
-textarea:focus, select:focus, input:focus{
+textarea:focus,
+select:focus,
+input:focus {
     box-shadow: 0px 0px 10px 0px #00c2ff;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
-
-label[for="safefilter"]{
+label[for="safefilter"] {
     margin-right: 5px;
 }
 
-
-.safefilterContainer{
+.safefilterContainer {
     display: flex;
     align-items: center;
 }
 
 /* custom checkbox */
-input[type="checkbox"]{
-    appearance: none ;
+input[type="checkbox"] {
+    appearance: none;
     margin: 3px 0 0 5px;
-    border: 2px solid black ;
-    padding: 2px 2px 2px 2px ;
-    width: 56px ;
+    border: 2px solid black;
+    padding: 2px 2px 2px 2px;
+    width: 56px;
 }
 
 input[type="checkbox"]:checked {
-    color: #00c2ff ;
+    color: #00c2ff;
 }
 
 input[type="checkbox"]::after {
-    background-color: grey ;
-    border-radius: 10px 10px 10px 10px ;
-    content: "" ;
-    display: block ;
-    height: 18px ;
-    transform: translateX(0px) ;
+    background-color: grey;
+    border-radius: 10px 10px 10px 10px;
+    content: "";
+    display: block;
+    height: 18px;
+    transform: translateX(0px);
     transition: 0.3s;
-    width: 20px ;
+    width: 20px;
 }
 
 input[type="checkbox"]:checked::after {
     background-color: #00c2ff;
-    transform: translateX(28px) ;
+    transform: translateX(28px);
 }
 
-button{
+button {
     margin-top: 10px;
     background-color: white;
     cursor: pointer;
     transition: 0.3s;
-    
 }
-button:hover{
+button:hover {
     background-color: #00c2ff;
 }
 
 /* Right side of the screen */
-.output{
+.output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-basis: 100%;
+    padding: 30px;
+    height: calc(100vh - var(--navHeight));
 }
-
+.generatedImg {
+    max-height: 100%;
+    max-width: 100%;
+}

@@ -8,6 +8,7 @@
             <meta name="description" content="This website allows you to generate images based on your prompt" />
             <link rel="icon" type="image/x-icon" href="/Logo/favicon.PNG" />
             <title>AI Image Generator</title>
+            <script src="https://kit.fontawesome.com/9efd4ac438.js" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="css/style.css" />
         </head>
     </head>
@@ -24,53 +25,69 @@
             </div>
         </nav>
         <div id="wrapper">
-             <div class="flex">
-                <div class="settings">
-                    <label for="prompt">polecenie</label>
-                    <input type="text" id="prompt">
-                    <label for="negprompt">negatywne polecenie</label>
-                    <input type="text">
-                    <label for="aspectRatio"></label>
+            <div class="flex">
+                <form class="settings">
+                    <label for="prompt">Polecenie</label>
+                    <textarea id="prompt" maxlength="1000" rows="10" placeholder="Wprowadź opis obrazu, który ma zostać wygenerowany, użyj języka angielskiego" required></textarea>
+
+                    <label for="negprompt">Negatywne polecenie</i></label>
+                    <textarea id="negprompt" maxlength="1000" rows="10" placeholder="Wprowadź właściwości obrazu, których generator ma unikać"></textarea>
+
+                    <label for="aspectRatio">Wymiar</label>
                     <select id="aspectRatio">
                         <option value="square" default>Kwadrat</option>
                         <option value="portrait">Portret</option>
                         <option value="landscape">Krajobraz</option>
                     </select>
-                    <label for="safefilter">Bezpieczny filtr</label>
-                    <input type="checkbox" id="safefilter">
-                    <label for="seed">ziarno</label>
-                    <input type="number" id="seed" value="-1">
-                    <label for="style">styl</label>
-                    <select id="style">
-                        <option default>bez stylu</option>
-                        <option value="enhance">enhance</option>
-                        <option value="anime">anime</option>
-                        <option value="photographic">photographic</option>
-                        <option value="digital-art">digital-art</option>
-                        <option value="comic-book">comic-book</option>
-                        <option value="fantasy-art">fantasy-art</option>
-                        <option value="analog-film">analog-film</option>
-                        <option value="neonpunk">neonpunk</option>
-                        <option value="isometric">isometric</option>
-                        <option value="lowpoly">lowpoly</option>
-                        <option value="origami">origami</option>
-                        <option value="line-art">line-art</option>
-                        <option value="craft-clay">craft-clay</option>
-                        <option value="3d-model">3d-model</option>
-                        <option value="pixel-art">pixel-art</option>
-                        <option value="texture">texture</option>
-                        <option value="futuristic">futuristic</option>
-                        <option value="realism">realism</option>
-                        <option value="watercolor">watercolor</option>
-                        <option value="photorealistic">photorealistic</option>
-                    </select>
-                    <label for="steps">Liczba kroków</label>
-                    <input type="range" min="1" max="500" value="20">
-                </div>
-                <div class="output">
 
+                    <label for="seed">Ziarno<i class="fa-solid fa-question" title="Numer odpowiadający za inicjalizację generowania obrazu. Wartość domyślna 0 oznacza że program dobierze tą wartość losowo. Jeżeli chcesz stworzyć podobne do siebie obrazy, spróbuj użyć tego samego ziarna kilka razy. Min: 0, Max:9223372036854776000"></i></label>
+                    <input type="number" id="seed" min="0" max="9223372036854776000" value="0" />
+
+                    <label for="guidanceScale" title="Określa w jakim stopniu proces generowania grafiki ma być zgodny z podpowiedzią tekstową. Min: 5, Max: 50">Skala wskazówek<i class="fa-solid fa-question"></i></label>
+                    <input type="number" id="guidanceScale" min="5" max="50" value="7" />
+
+                    <label for="style">Styl</label>
+                    <select id="style">
+                        <option default>Bez stylu</option>
+                        <option value="enhance">Eenhance</option>
+                        <option value="anime">Anime</option>
+                        <option value="photographic">Photographic</option>
+                        <option value="digital-art">Digital-art</option>
+                        <option value="comic-book">Comic-book</option>
+                        <option value="fantasy-art">Fantasy-art</option>
+                        <option value="analog-film">Analog-film</option>
+                        <option value="neonpunk">Neonpunk</option>
+                        <option value="isometric">Isometric</option>
+                        <option value="lowpoly">Lowpoly</option>
+                        <option value="origami">Origami</option>
+                        <option value="line-art">Line-art</option>
+                        <option value="craft-clay">Craft-clay</option>
+                        <option value="3d-model">3D-model</option>
+                        <option value="pixel-art">Pixel-art</option>
+                        <option value="texture">Texture</option>
+                        <option value="futuristic">Futuristic</option>
+                        <option value="realism">Realism</option>
+                        <option value="watercolor">Watercolor</option>
+                        <option value="photorealistic">Photorealistic</option>
+                    </select>
+
+                    <label for="steps">Liczba kroków <i class="fa-solid fa-question" title="Wieksza liczba kroków może przyczynić się do lepszej jakości wygenerowanego obrazu, ale także wydłuża czas oczekiwania. Min: 10, Max: 100"></i></label>
+                    <input type="number" id="steps" min="10" max="100" value="50" />
+                    
+                    <div class="safefilterContainer">
+                        <label for="safefilter">Bezpieczny filtr</label>
+                        <input type="checkbox" id="safefilter" checked />
+                    </div>
+                    
+                    <button id="generate">Generuj</button>
+                </form>
+
+                <div class="output">
+                    <div>
+                        
+                    </div>
                 </div>
-             </div>
+            </div>
         </div>
         <script src="js/nav.js"></script>
     </body>

@@ -9,6 +9,7 @@
             <link rel="icon" type="image/x-icon" href="/Logo/favicon.PNG" />
             <title>AI Image Generator</title>
             <script src="https://kit.fontawesome.com/9efd4ac438.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
             <link rel="stylesheet" href="css/style.css" />
         </head>
     </head>
@@ -82,9 +83,14 @@
 
                     <button id="generate">Generuj</button>
                 </form>
-                    
+
                 <div class="output">
-                    <img class="generatedImg" src="" alt="">
+                    <img class="generatedImg" src="" alt="" />
+                    <div class="loaderContainer">
+                        <div class="loader"></div>
+                        <p><span id="loadingTime">0</span>s</p>
+                        <p id="loadingStatus"></p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -234,10 +234,33 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-basis: 100%;
+    position: relative;
     padding: 30px;
     height: calc(100vh - var(--navHeight));
 }
 .generatedImg {
     max-height: 100%;
     max-width: 100%;
+}
+
+.loaderContainer{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 20px solid #00c2ff;
+    border-left-color: #fff0;
+    border-right-color: #fff0;
+    animation: rotateLoader 1s infinite;
+    margin-bottom: 20px;
+}
+@keyframes rotateLoader {
+    to {
+        transform: rotate(180deg);
+    }
 }

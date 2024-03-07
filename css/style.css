@@ -158,6 +158,10 @@ i.fa-question {
     cursor: help;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 label {
     margin: 10px 0 5px;
 }
@@ -224,7 +228,7 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
-button:hover {
+button:not([disabled="true"]):hover {
     background-color: #00c2ff;
 }
 
@@ -247,6 +251,7 @@ button:hover {
     display: none;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .loader {
@@ -263,4 +268,40 @@ button:hover {
     to {
         transform: rotate(180deg);
     }
+}
+
+table{
+    /* margin: 20px 10px; */
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    border: 2px solid black;
+    min-height: 100px;
+    padding: 10px 5px;
+    text-align: center;
+}
+table tr:nth-child(2n){
+    background-color: white;
+}
+table img{
+    width: 50px;
+}
+
+.deleteItem{
+    color: red;
+}
+.icon{
+    font-size: 2rem;
+    transition: 0.3s;
+}
+.icon:hover{
+    font-size: 2.5rem;
+}
+
+.favouriteIcon{
+    color: #8d8d8d;
+}
+.favouriteIconAssigned{
+    color: orange;
 }

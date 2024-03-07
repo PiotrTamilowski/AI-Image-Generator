@@ -32,11 +32,11 @@
                     <label for="prompt">Polecenie</label>
                     <textarea id="prompt" maxlength="1000" rows="10" placeholder="Wprowadź opis obrazu, który ma zostać wygenerowany. Użyj języka angielskiego" required></textarea>
 
-                    <label for="negprompt">Negatywne polecenie</label>
+                    <label for="negprompt">Negacja</label>
                     <textarea id="negprompt" maxlength="1000" rows="10" placeholder="Wprowadź właściwości obrazu, których generator ma unikać. Uzyj języka angielskiego"></textarea>
 
                     <label for="aspectRatio">Wymiar</label>
-                    <select id="aspectRatio">
+                    <select id="aspectRatio" class="pointer">
                         <option value="square" default>Kwadrat</option>
                         <option value="portrait">Portret</option>
                         <option value="landscape">Krajobraz</option>
@@ -49,7 +49,7 @@
                     <input type="number" id="guidanceScale" min="5" max="50" value="7" />
 
                     <label for="style">Styl</label>
-                    <select id="style">
+                    <select id="style" class="pointer">
                         <option value="no style" default>Bez stylu</option>
                         <option value="enhance">Enhance</option>
                         <option value="anime">Anime</option>
@@ -78,7 +78,7 @@
 
                     <div class="safefilterContainer">
                         <label for="safefilter">Bezpieczny filtr</label>
-                        <input type="checkbox" id="safeFilter" checked />
+                        <input type="checkbox" id="safeFilter" class="pointer" checked />
                     </div>
 
                     <button id="generate">Generuj</button>
@@ -92,6 +92,25 @@
                         <p id="loadingStatus"></p>
                     </div>
                 </div>
+            </div>
+            <div id="tableContainer">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lp</th>
+                            <th>Obraz</th>
+                            <th>Polecenie</th>
+                            <th>Negacja</th>
+                            <th>Styl</th>
+                            <th>Czas tworzenia</th>
+                            <th>Ulubione</th>
+                            <th>Usuń</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
             </div>
         </div>
         <script src="js/nav.js"></script>

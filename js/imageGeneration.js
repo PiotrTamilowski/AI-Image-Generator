@@ -1,13 +1,18 @@
 const generatedImagesArray = [];
 
 class generatedImage {
-    constructor(imageSrc, prompt, negtPrompt, style, creationTime) {
+    constructor(imageSrc, prompt, negtPrompt, style, creationTime, aspectRatio, seed, steps, guidanceScale, safeFilter) {
         this.imageSrc = imageSrc;
         this.prompt = prompt;
         this.negPrompt = negtPrompt;
         this.style = style;
         this.creationTime = creationTime;
         this.favourite = false;
+        this.aspectRatio = aspectRatio;
+        this.seed = seed;
+        this.steps = steps;
+        this.guidanceScale = guidanceScale;
+        this.safeFilter = safeFilter;
     }
 }
 
@@ -18,12 +23,20 @@ const loadingTime = document.getElementById("loadingTime");
 const loadingStatus = document.getElementById("loadingStatus");
 const generatedImg = document.querySelector(".generatedImg");
 const tBody = document.querySelector("tbody");
+const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".modalContent");
+const magnifyingGlass = document.querySelector(".magnifyingGlass");
+magnifyingGlass.addEventListener("click", zoom);
+const closeModalBtn = document.querySelector(".closeBtn");
+closeModalBtn.addEventListener("click", closeModal);
+const modalImage = document.querySelector(".modalImage");
+const modalTableElements = document.querySelectorAll(".modalTable td");
 
 generateBtn.addEventListener("click", function (e) {
     loader.style.display = "block";
     const prompt = document.getElementById("prompt").value;
     const negPrompt = document.getElementById("negprompt").value;
-    const aspectRatio = document.getElementById("aspectRatio").value;
+    let aspectRatio = document.getElementById("aspectRatio").value;
     let seed = Number(document.getElementById("seed").value);
     seed != 0 ? (seed = seed) : (seed = Math.floor(Math.random() * 9223372036854776000) + 1);
     const guidanceScale = document.getElementById("guidanceScale").value;
@@ -31,7 +44,6 @@ generateBtn.addEventListener("click", function (e) {
     style != "no style" ? (style = style) : (style = undefined);
     const steps = Number(document.getElementById("steps").value);
     const safeFilter = document.getElementById("safeFilter").checked;
-
 
     if (prompt.length > 0 && seed >= 0 && seed <= 9223372036854776000 && guidanceScale >= 5 && guidanceScale <= 50 && steps >= 10 && steps <= 100) {
         e.preventDefault();
@@ -69,8 +81,6 @@ generateBtn.addEventListener("click", function (e) {
             },
         };
 
-       
-
         axios
             .request(options)
             .then(function (response) {
@@ -100,20 +110,26 @@ generateBtn.addEventListener("click", function (e) {
                                 clearInterval(timer);
                                 loaderContainer.style.display = "none";
                                 generatedImg.src = response2.data.result.output[0];
-                                generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, style != undefined ? style = style : style = "no style", `${timePassed.toFixed(1)}s`));
+                                if (aspectRatio == "square") {
+                                    aspectRatio = "kwadrat";
+                                } else if (aspectRatio == "portrait") {
+                                    aspectRatio = "portret";
+                                } else {
+                                    aspectRatio = "Krajobraz";
+                                }
+                                generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, style != undefined ? (style = style) : (style = "no style"), `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter));
                                 updateTable();
                                 generateBtn.disable = false;
-                            } else if (response2.data.status = "FAILED"){
+                            } else if ((response2.data.status = "FAILED")) {
                                 clearInterval(inv);
                                 clearInterval(timer);
                                 generateBtn.disable = false;
                                 loader.style.display = "none";
-                                if(response2.data.errorMessage = "The provided prompt contains NSFW content. Please provide a clean prompt"){
+                                if ((response2.data.errorMessage = "The provided prompt contains NSFW content. Please provide a clean prompt")) {
                                     loadingStatus.textContent = "Twoje polecenie zawiera treści zablokowane przez filtr NSFW. Jeżeli mimo to chcesz wygenerować taki obraz, wyłacz bezpieczny filtr";
                                 } else {
                                     loadingStatus.textContent = response2.data.status;
                                 }
-                                
                             }
                         });
                     }, 1000);
@@ -129,7 +145,7 @@ generateBtn.addEventListener("click", function (e) {
 });
 
 function updateTable() {
-    tBody.innerHTML="";
+    tBody.innerHTML = "";
     generatedImagesArray.forEach((item, index) => {
         const tr = document.createElement("tr");
         const lp = document.createElement("td");
@@ -137,7 +153,6 @@ function updateTable() {
         const img = document.createElement("img");
         const prompt = document.createElement("td");
         const negprompt = document.createElement("td");
-        const style = document.createElement("td");
         const creationTime = document.createElement("td");
         const favouriteContainer = document.createElement("td");
         const favouriteIcon = document.createElement("i");
@@ -147,24 +162,23 @@ function updateTable() {
         lp.textContent = index + 1;
         img.src = item.imageSrc;
         img.classList.add("pointer");
-        img.addEventListener("click", function () {
-            console.log(this);
-        });
+        img.addEventListener("click", openModal);
         imgContainer.appendChild(img);
         prompt.textContent = item.prompt;
         negprompt.textContent = item.negPrompt;
-        style.textContent = item.style;
         creationTime.textContent = item.creationTime;
         favouriteIcon.classList.add("fa-solid", "fa-star", "pointer", "favouriteIcon", "icon");
+        favouriteIcon.addEventListener("click", addToFavourites);
+        item.favourite == true ? favouriteIcon.classList.add("favouriteIconAssigned") : favouriteIcon.classList.remove("favouriteIconAssigned");
         favouriteContainer.appendChild(favouriteIcon);
         removeIcon.classList.add("fa-solid", "fa-circle-xmark", "pointer", "deleteItem", "icon");
+        removeIcon.addEventListener("click", deleteRow);
         removeContainer.appendChild(removeIcon);
 
         tr.appendChild(lp);
         tr.appendChild(imgContainer);
         tr.appendChild(prompt);
         tr.appendChild(negprompt);
-        tr.appendChild(style);
         tr.appendChild(creationTime);
         tr.appendChild(favouriteContainer);
         tr.appendChild(removeContainer);
@@ -173,10 +187,66 @@ function updateTable() {
     });
 }
 
+/* DELETE FUNCTION*/
+
+function deleteRow() {
+    const rowToDelte = Number(this.parentNode.parentNode.childNodes[0].textContent) - 1;
+    console.log(rowToDelte);
+    generatedImagesArray.splice(rowToDelte, 1);
+    updateTable();
+}
+
+/* MARK AS FAVOURITE FUNCTION */
+
+function addToFavourites() {
+    let arrayIndex = Number(this.parentNode.parentNode.childNodes[0].textContent) - 1;
+    if (generatedImagesArray[arrayIndex].favourite == false) {
+        generatedImagesArray[arrayIndex].favourite = true;
+    } else {
+        generatedImagesArray[arrayIndex].favourite = false;
+    }
+    updateTable();
+}
+
+/* GENERATING TEST DATA*/
+
 function addTestData() {
-    generatedImagesArray.push(new generatedImage("../images/0.png", "blabasdasdasd", "asdasdasd", "no style", "8.7s"));
-    generatedImagesArray.push(new generatedImage("../images/17.png", "asdasdas", "", "no style", "3.8s"));
-    generatedImagesArray.push(new generatedImage("../images/68.png", "prompt prompt prompt", "", "futuristic", "8.8s"));
+    generatedImagesArray.push(new generatedImage("../images/0.png", `cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy`, `anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,`, "no style", "8.7s", "kwadrat", 123187163584, 50, 7, false));
+    generatedImagesArray.push(new generatedImage("../images/17.png", "asdasdas", "", "no style", "3.8s", "portret", 8697465651, 50, 10, false));
+    generatedImagesArray.push(new generatedImage("../images/68.png", "prompt prompt prompt", "", "futuristic", "8.8s", "landscape", 189745261, 50, 15, false));
     updateTable();
 }
 addTestData();
+
+/* MODAL */
+
+function openModal() {
+    const imgIndex = Number(this.parentNode.parentNode.childNodes[0].textContent) - 1;
+    modalImage.src = generatedImagesArray[imgIndex].imageSrc;
+    modalTableElements[0].textContent = generatedImagesArray[imgIndex].prompt;
+    modalTableElements[1].textContent = generatedImagesArray[imgIndex].negPrompt;
+    modalTableElements[2].textContent = generatedImagesArray[imgIndex].style;
+    modalTableElements[3].textContent = generatedImagesArray[imgIndex].creationTime;
+    modalTableElements[4].textContent = generatedImagesArray[imgIndex].aspectRatio;
+    modalTableElements[5].textContent = generatedImagesArray[imgIndex].seed;
+    modalTableElements[6].textContent = generatedImagesArray[imgIndex].guidanceScale;
+    modalTableElements[7].textContent = generatedImagesArray[imgIndex].steps;
+    modalTableElements[8].textContent = generatedImagesArray[imgIndex].safeFilter;
+
+    document.body.style.overflow = "hidden";
+    modal.classList.add("showModal");
+}
+
+function closeModal() {
+    document.body.style.overflow = "visible";
+    modal.classList.remove("showModal");
+    if(modalContent.classList.contains("active")){
+        setTimeout(zoom, 500)
+    }
+}
+
+function zoom(){
+    magnifyingGlass.childNodes[0].classList.toggle("fa-magnifying-glass-plus");
+    magnifyingGlass.childNodes[0].classList.toggle("fa-magnifying-glass-minus");
+    modalContent.classList.toggle("active")
+}

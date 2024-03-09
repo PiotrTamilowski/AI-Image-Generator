@@ -16,12 +16,31 @@ class generatedImage {
     }
 }
 
+/* Image Generation Form Elements*/
 const generateBtn = document.getElementById("generate");
 const loaderContainer = document.querySelector(".loaderContainer");
 const loader = document.querySelector(".loader");
 const loadingTime = document.getElementById("loadingTime");
 const loadingStatus = document.getElementById("loadingStatus");
 const generatedImg = document.querySelector(".generatedImg");
+
+/* Search Elements*/
+const searchButton = document.querySelector(".searchButton");
+searchButton.addEventListener("click", openSearchWindow);
+const searchWindow = document.querySelector(".searchWindow");
+const closeSearchWindowButton = document.querySelector(".closeSearchBtn");
+closeSearchWindowButton.addEventListener("click", closeSearchWindow);
+const dragBar = document.querySelector(".dragBar");
+window.addEventListener("mousemove", dragWindow);
+dragBar.addEventListener("mousedown", startDragging);
+window.addEventListener("mouseup", stopDragging);
+const searchSelect = document.querySelector(".searchSelect");
+const searchInput = document.querySelector(".searchInput");
+searchInput.addEventListener("input", () => {
+    updateTable(searchInput.value);
+});
+
+/* Main table and Modal Elements*/
 const tBody = document.querySelector("tbody");
 const modal = document.querySelector(".modal");
 const modalContent = document.querySelector(".modalContent");
@@ -144,54 +163,69 @@ generateBtn.addEventListener("click", function (e) {
     }
 });
 
-function updateTable() {
+function updateTable(phrase) {
     tBody.innerHTML = "";
-    generatedImagesArray.forEach((item, index) => {
-        const tr = document.createElement("tr");
-        const lp = document.createElement("td");
-        const imgContainer = document.createElement("td");
-        const img = document.createElement("img");
-        const prompt = document.createElement("td");
-        const negprompt = document.createElement("td");
-        const creationTime = document.createElement("td");
-        const favouriteContainer = document.createElement("td");
-        const favouriteIcon = document.createElement("i");
-        const removeContainer = document.createElement("td");
-        const removeIcon = document.createElement("i");
+    if (phrase === undefined) {
+        generatedImagesArray.forEach((item, index) => {
+            createTable(item, index);
+        });
+    } else {
+        generatedImagesArray.forEach((item, index) => {
+            if (item.prompt.includes(phrase) && searchSelect.value == "prompt") {
+                createTable(item, index);
+            } else if(item.negPrompt.includes(phrase) && searchSelect.value == "negprompt"){
+                createTable(item, index);
+            } else if(item.creationTime.includes(phrase) && searchSelect.value == "creationTime"){
+                createTable(item, index);
+            } 
+        });
+    }
+}
 
-        lp.textContent = index + 1;
-        img.src = item.imageSrc;
-        img.classList.add("pointer");
-        img.addEventListener("click", openModal);
-        imgContainer.appendChild(img);
-        prompt.textContent = item.prompt;
-        negprompt.textContent = item.negPrompt;
-        creationTime.textContent = item.creationTime;
-        favouriteIcon.classList.add("fa-solid", "fa-star", "pointer", "favouriteIcon", "icon");
-        favouriteIcon.addEventListener("click", addToFavourites);
-        item.favourite == true ? favouriteIcon.classList.add("favouriteIconAssigned") : favouriteIcon.classList.remove("favouriteIconAssigned");
-        favouriteContainer.appendChild(favouriteIcon);
-        removeIcon.classList.add("fa-solid", "fa-circle-xmark", "pointer", "deleteItem", "icon");
-        removeIcon.addEventListener("click", deleteRow);
-        removeContainer.appendChild(removeIcon);
+function createTable(item, index) {
+    const tr = document.createElement("tr");
+    const lp = document.createElement("td");
+    const imgContainer = document.createElement("td");
+    const img = document.createElement("img");
+    const prompt = document.createElement("td");
+    const negprompt = document.createElement("td");
+    const creationTime = document.createElement("td");
+    const favouriteContainer = document.createElement("td");
+    const favouriteIcon = document.createElement("i");
+    const removeContainer = document.createElement("td");
+    const removeIcon = document.createElement("i");
 
-        tr.appendChild(lp);
-        tr.appendChild(imgContainer);
-        tr.appendChild(prompt);
-        tr.appendChild(negprompt);
-        tr.appendChild(creationTime);
-        tr.appendChild(favouriteContainer);
-        tr.appendChild(removeContainer);
+    lp.textContent = index + 1;
+    img.src = item.imageSrc;
+    img.classList.add("pointer");
+    img.addEventListener("click", openModal);
+    imgContainer.appendChild(img);
+    prompt.textContent = item.prompt;
+    negprompt.textContent = item.negPrompt;
+    creationTime.textContent = item.creationTime;
+    favouriteIcon.classList.add("fa-solid", "fa-star", "pointer", "favouriteIcon", "icon");
+    favouriteIcon.addEventListener("click", addToFavourites);
+    item.favourite == true ? favouriteIcon.classList.add("favouriteIconAssigned") : favouriteIcon.classList.remove("favouriteIconAssigned");
+    favouriteContainer.appendChild(favouriteIcon);
+    removeIcon.classList.add("fa-solid", "fa-circle-xmark", "pointer", "deleteItem", "icon");
+    removeIcon.addEventListener("click", deleteRow);
+    removeContainer.appendChild(removeIcon);
 
-        tBody.appendChild(tr);
-    });
+    tr.appendChild(lp);
+    tr.appendChild(imgContainer);
+    tr.appendChild(prompt);
+    tr.appendChild(negprompt);
+    tr.appendChild(creationTime);
+    tr.appendChild(favouriteContainer);
+    tr.appendChild(removeContainer);
+
+    tBody.appendChild(tr);
 }
 
 /* DELETE FUNCTION*/
 
 function deleteRow() {
     const rowToDelte = Number(this.parentNode.parentNode.childNodes[0].textContent) - 1;
-    console.log(rowToDelte);
     generatedImagesArray.splice(rowToDelte, 1);
     updateTable();
 }
@@ -240,13 +274,38 @@ function openModal() {
 function closeModal() {
     document.body.style.overflow = "visible";
     modal.classList.remove("showModal");
-    if(modalContent.classList.contains("active")){
-        setTimeout(zoom, 500)
+    if (modalContent.classList.contains("active")) {
+        setTimeout(zoom, 500);
     }
 }
 
-function zoom(){
+function zoom() {
     magnifyingGlass.childNodes[0].classList.toggle("fa-magnifying-glass-plus");
     magnifyingGlass.childNodes[0].classList.toggle("fa-magnifying-glass-minus");
-    modalContent.classList.toggle("active")
+    modalContent.classList.toggle("active");
 }
+
+function openSearchWindow() {
+    searchWindow.style.visibility = "visible";
+    searchWindow.style.opacity = 1;
+}
+function closeSearchWindow() {
+    searchWindow.style.visibility = "hidden";
+    searchWindow.style.opacity = 0;
+}
+
+let isWindowDraggable = false;
+function dragWindow(e) {
+    if (isWindowDraggable) {
+        searchWindow.style.top = `${e.clientY - 15}px`;
+        searchWindow.style.left = `${e.clientX - 110}px`;
+    }
+}
+function startDragging() {
+    isWindowDraggable = true;
+}
+function stopDragging() {
+    isWindowDraggable = false;
+}
+
+

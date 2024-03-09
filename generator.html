@@ -93,6 +93,20 @@
                     </div>
                 </div>
             </div>
+            <button class="searchButton">Wyszukaj</button>
+            <div class="searchWindow">
+                <div class="dragBar">
+                    <div class="closeSearchBtn"><i class="fa-solid fa-x"></i></div>
+                </div>
+                <p>Wyszukaj w kolumnie:</p>
+                <select name="" class="searchSelect">
+                    <option value="prompt">Polecenie</option>
+                    <option value="negprompt">Negacja</option>
+                    <option value="creationTime">Czas tworzenia</option>
+                </select>
+                <p>Wyszukaj po</p>
+                <input type="text" class="searchInput">
+            </div>
             <div id="tableContainer">
                 <table>
                     <thead>
@@ -130,7 +144,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Czas utworzenia</th>
+                        <th>Czas tworzenia</th>
                         <td></td>
                     </tr>
                     <tr>

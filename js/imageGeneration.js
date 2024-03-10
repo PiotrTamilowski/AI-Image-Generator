@@ -1,4 +1,5 @@
-const generatedImagesArray = [];
+const generatedImagesArray = getItemsFromLocalStorage();
+
 
 class generatedImage {
     constructor(imageSrc, prompt, negtPrompt, style, creationTime, aspectRatio, seed, steps, guidanceScale, safeFilter) {
@@ -137,6 +138,7 @@ generateBtn.addEventListener("click", function (e) {
                                     aspectRatio = "Krajobraz";
                                 }
                                 generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, style != undefined ? (style = style) : (style = "no style"), `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter));
+                                pushItemsToLocalStorage();
                                 updateTable();
                                 generateBtn.disable = false;
                             } else if ((response2.data.status = "FAILED")) {
@@ -162,6 +164,8 @@ generateBtn.addEventListener("click", function (e) {
             });
     }
 });
+
+/* MAIN TABLE FUNCTIONS */
 
 function updateTable(phrase) {
     tBody.innerHTML = "";
@@ -227,6 +231,7 @@ function createTable(item, index) {
 function deleteRow() {
     const rowToDelte = Number(this.parentNode.parentNode.childNodes[0].textContent) - 1;
     generatedImagesArray.splice(rowToDelte, 1);
+    pushItemsToLocalStorage();
     updateTable();
 }
 
@@ -239,20 +244,13 @@ function addToFavourites() {
     } else {
         generatedImagesArray[arrayIndex].favourite = false;
     }
+    pushItemsToLocalStorage();
     updateTable();
 }
 
-/* GENERATING TEST DATA*/
 
-function addTestData() {
-    generatedImagesArray.push(new generatedImage("../images/0.png", `cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy`, `anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,`, "no style", "8.7s", "kwadrat", 123187163584, 50, 7, false));
-    generatedImagesArray.push(new generatedImage("../images/17.png", "asdasdas", "", "no style", "3.8s", "portret", 8697465651, 50, 10, false));
-    generatedImagesArray.push(new generatedImage("../images/68.png", "prompt prompt prompt", "", "futuristic", "8.8s", "landscape", 189745261, 50, 15, false));
-    updateTable();
-}
-addTestData();
 
-/* MODAL */
+/* MODAL FUNCTIONS*/
 
 function openModal() {
     const imgIndex = Number(this.parentNode.parentNode.childNodes[0].textContent) - 1;
@@ -285,6 +283,8 @@ function zoom() {
     modalContent.classList.toggle("active");
 }
 
+/* SEARCH WIDOW FUNCTIONS*/
+
 function openSearchWindow() {
     searchWindow.style.visibility = "visible";
     searchWindow.style.opacity = 1;
@@ -308,4 +308,24 @@ function stopDragging() {
     isWindowDraggable = false;
 }
 
+function pushItemsToLocalStorage(){
+    localStorage.setItem("images", JSON.stringify(generatedImagesArray))
+}
 
+function getItemsFromLocalStorage(){
+    return JSON.parse(localStorage.getItem("images"));
+}
+
+/* START */
+
+updateTable();
+
+/* GENERATING TEST DATA*/
+
+function addTestData() {
+    generatedImagesArray.push(new generatedImage("../images/0.png", `cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy`, `anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,`, "no style", "8.7s", "kwadrat", 123187163584, 50, 7, false));
+    generatedImagesArray.push(new generatedImage("../images/17.png", "asdasdas", "", "no style", "3.8s", "portret", 8697465651, 50, 10, false));
+    generatedImagesArray.push(new generatedImage("../images/68.png", "prompt prompt prompt", "", "futuristic", "8.8s", "landscape", 189745261, 50, 15, false));
+    updateTable();
+}
+// addTestData();

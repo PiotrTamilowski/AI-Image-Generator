@@ -1,4 +1,6 @@
-const generatedImagesArray = getItemsFromLocalStorage();
+let generatedImagesArray;
+
+getItemsFromLocalStorage("images").length > 0 ? generatedImagesArray = getItemsFromLocalStorage("images") : generatedImagesArray = [];
 
 
 class generatedImage {
@@ -299,6 +301,8 @@ function dragWindow(e) {
     if (isWindowDraggable) {
         searchWindow.style.top = `${e.clientY - 15}px`;
         searchWindow.style.left = `${e.clientX - 110}px`;
+        // searchWindow.style.top = e.clientY + "px";
+        // searchWindow.style.left = e.clientX  + "px";
     }
 }
 function startDragging() {
@@ -317,8 +321,8 @@ function getItemsFromLocalStorage(){
 }
 
 /* START */
-
 updateTable();
+/* START */ 
 
 /* GENERATING TEST DATA*/
 

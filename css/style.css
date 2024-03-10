@@ -67,6 +67,7 @@ nav div a:hover {
 /* main page */
 #wrapper {
     margin: auto;
+    margin-top: var(--navHeight);
 }
 
 .slogan {
@@ -75,7 +76,7 @@ nav div a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    height: calc(100vh - var(--navHeight));
 }
 
 h1 {
@@ -130,7 +131,7 @@ h2 {
 
 .flex {
     display: flex;
-    margin-top: var(--navHeight);
+    /* margin-top: var(--navHeight); */
     border-bottom: 3px solid #d9d9d9;
 }
 
@@ -434,3 +435,65 @@ table img{
 .modalTable th{
     min-width: 200px;
 }
+
+
+/* GALLERY*/
+
+
+.flexGallery{
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5vw;
+}
+.flexColumn img{
+    width: 100%;
+    margin: 0.5vw 0;
+}
+/* MEDIA QUERIES FOR COLUMN NUMBER CHANGE*/
+@media (max-width: 1600px){
+    .flexColumn:nth-of-type(5){
+        display: none;
+    }
+}
+@media (max-width: 1200px){
+    .flexColumn:nth-of-type(4){
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    .flexColumn:nth-of-type(3){
+        display: none;
+    }
+}
+@media (max-width: 600px){
+    .flexColumn:nth-of-type(2){
+        display: none;
+    }
+}
+
+
+
+/* FAVOURITES */
+.flexFavourites{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+.flexFavourites article{
+    height: 300px;
+    margin: 5px 0;
+}
+
+.flexFavourites img{
+  max-height: 100%;
+  border-radius: 5px;
+}
+

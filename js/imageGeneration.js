@@ -327,10 +327,7 @@ function getImageDataFromSessionStorage(){
 
         document.getElementById("prompt").value = sessionObj.prompt
         document.getElementById("negprompt").value = sessionObj.negprompt
-        console.log("DONE")
-    } else {
-        console.log("THERE IS NOTHING IN LS")
-    }
+    } 
 }
 
 /* START */
@@ -349,9 +346,9 @@ getImageDataFromSessionStorage();
 /* GENERATING TEST DATA*/
 
 function addTestData() {
-    generatedImagesArray.push(new generatedImage("../images/0.png", `cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy`, `anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,`, "no style", "8.7s", "kwadrat", 123187163584, 50, 7, false));
-    generatedImagesArray.push(new generatedImage("../images/17.png", "asdasdas", "", "no style", "3.8s", "portret", 8697465651, 50, 10, false));
-    generatedImagesArray.push(new generatedImage("../images/68.png", "prompt prompt prompt", "", "futuristic", "8.8s", "landscape", 189745261, 50, 15, false));
+    generatedImagesArray.push(new generatedImage("../images/0.jpg", `cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy`, `anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,`, "no style", "8.7s", "kwadrat", 123187163584, 50, 7, false));
+    generatedImagesArray.push(new generatedImage("../images/17.jpg", "asdasdas", "", "no style", "3.8s", "portret", 8697465651, 50, 10, false));
+    generatedImagesArray.push(new generatedImage("../images/68.jpg", "prompt prompt prompt", "", "futuristic", "8.8s", "landscape", 189745261, 50, 15, false));
     updateTable();
 }
 // addTestData();

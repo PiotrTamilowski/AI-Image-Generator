@@ -1,6 +1,6 @@
-let generatedImagesArray;
+let generatedImagesArray = [];
 
-getItemsFromLocalStorage("images").length > 0 ? generatedImagesArray = getItemsFromLocalStorage("images") : generatedImagesArray = [];
+(getItemsFromLocalStorage() != null) && (getItemsFromLocalStorage() != undefined) ? generatedImagesArray = getItemsFromLocalStorage("images") : generatedImagesArray = [];
 
 
 class generatedImage {
@@ -320,8 +320,30 @@ function getItemsFromLocalStorage(){
     return JSON.parse(localStorage.getItem("images"));
 }
 
+function getImageDataFromSessionStorage(){
+    if(sessionStorage.copiedData != undefined){
+        let sessionObj = JSON.parse(sessionStorage.copiedData);
+        console.log(sessionObj)
+
+        document.getElementById("prompt").value = sessionObj.prompt
+        document.getElementById("negprompt").value = sessionObj.negprompt
+        console.log("DONE")
+    } else {
+        console.log("THERE IS NOTHING IN LS")
+    }
+}
+
 /* START */
+
+    
+    
+    
+
 updateTable();
+getImageDataFromSessionStorage();
+
+
+
 /* START */ 
 
 /* GENERATING TEST DATA*/

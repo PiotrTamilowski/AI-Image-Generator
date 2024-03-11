@@ -297,10 +297,10 @@ button:not([disabled="true"]):hover {
     justify-content: flex-end;
     background: linear-gradient(180deg, rgb(16 126 191) 0%, rgb(0 131 255) 35%, rgb(11 50 123) 100%);;
     margin-bottom: 10px;  
-    padding: 5px;
 
 }
 .closeSearchBtn{
+    padding: 5px;
     cursor: pointer;
     transition: 0.3s;
     color: white;
@@ -362,6 +362,7 @@ table img{
 
 .favouriteIcon{
     color: #8d8d8d;
+    text-shadow: 0 0 3px black;
 }
 .favouriteIconAssigned{
     color: orange;
@@ -439,6 +440,43 @@ table img{
 
 /* GALLERY*/
 
+.copyMessage{
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+    box-shadow: 8px 3px 8px 0px black;
+    z-index: 1;
+    
+}
+
+.copyMessageAnimationTrigger{
+    animation: copyMessageAnimation 3s ;
+}
+
+
+
+@keyframes copyMessageAnimation {
+    0% {
+        top: -100px;
+    }
+    20% {
+        top: 100px;
+    }
+    80% {
+        top: 100px;
+    }
+    100%{
+        top: -100px;
+    }
+
+}
 
 .flexGallery{
     display: flex;
@@ -451,8 +489,12 @@ table img{
     margin: 0.5vw;
 }
 .flexColumn img{
+    transition: filter 0.3s;
     width: 100%;
     margin: 0.5vw 0;
+}
+.flexColumn img:hover{
+    filter: brightness(0.7);
 }
 /* MEDIA QUERIES FOR COLUMN NUMBER CHANGE*/
 @media (max-width: 1600px){
@@ -488,8 +530,15 @@ table img{
 }
 
 .flexFavourites article{
+    position: relative;
     height: 300px;
     margin: 5px 0;
+}
+.flexFavourites i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-shadow: 0 0 8px black
 }
 
 .flexFavourites img{

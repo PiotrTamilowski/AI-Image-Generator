@@ -247,7 +247,7 @@ prompt - focus on a cat, dynamic pose,(intricate details), (hyperdetailed), 8k h
 no style
 
 out-55.png
-prompt - focus on a cat, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, atmospheric perspective
+prompt - focus on a dog, dynamic pose,(intricate details), (hyperdetailed), 8k hdr, high detailed, lot of details, high quality, soft cinematic light, atmospheric perspective
 no style
 
 out-56.png
@@ -310,8 +310,7 @@ no style
 
 out-69.png
 prompt - silhouette style Triumphant against the elements, the athlete conquers the precipitous cliffside of Taroko Gorge, Taiwan. Majestic mountains pierce the heavens, while the swirling mist and fog envelop the rugged terrain, lending an air of mystery and intrigue. The woman, agile and assured, tackles the arduous climb with unwavering determination. A sense of drama permeates the scene, as she disappears briefly into the dense cloud cover, only to emerge stronger and more resolute. This award-winning landscape photograph embodies the spirit of adventure, inviting the viewer to explore the remote beauty of this natural wonder. . high contrast, minimalistic, black and white, stark, dramatic
-negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic, 
-long neck, asymmetrical eyes, signature, watermark,
+negprompt - ugly, deformed, noisy, blurry, low contrast, color, realism, photorealistic, long neck, asymmetrical eyes, signature, watermark,
 no style
 
 out-70.png
@@ -637,7 +636,7 @@ no style
 
 
 
-
+https://processed-model-result.s3.us-east-2.amazonaws.com/d728c532-189a-4a46-9826-79a9ec151388_0.png - zrobione 07/03/2024 o 20:45
 
 
 

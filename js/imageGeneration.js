@@ -60,14 +60,14 @@ generateBtn.addEventListener("click", function (e) {
     const negPrompt = document.getElementById("negprompt").value;
     let aspectRatio = document.getElementById("aspectRatio").value;
     let seed = Number(document.getElementById("seed").value);
-    seed != 0 ? (seed = seed) : (seed = Math.floor(Math.random() * 9223372036854776000) + 1);
+    seed != 0 ? (seed = seed) : (seed = Math.floor(Math.random() * 9007199254740991) + 1);
     const guidanceScale = document.getElementById("guidanceScale").value;
     let style = document.getElementById("style").value;
     style != "no style" ? (style = style) : (style = undefined);
     const steps = Number(document.getElementById("steps").value);
     const safeFilter = document.getElementById("safeFilter").checked;
 
-    if (prompt.length > 0 && seed >= 0 && seed <= 9223372036854776000 && guidanceScale >= 5 && guidanceScale <= 50 && steps >= 10 && steps <= 100) {
+    if (prompt.length > 0 && seed >= 0 && seed <= 9007199254740991 && guidanceScale >= 5 && guidanceScale <= 50 && steps >= 10 && steps <= 100) {
         e.preventDefault();
         generateBtn.disable = true;
         loaderContainer.style.display = "flex";
@@ -139,7 +139,8 @@ generateBtn.addEventListener("click", function (e) {
                                 } else {
                                     aspectRatio = "Krajobraz";
                                 }
-                                generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, style != undefined ? (style = style) : (style = "no style"), `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter));
+                                
+                                generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, style = convertStyleToPolish(style), `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter));
                                 pushItemsToLocalStorage();
                                 updateTable();
                                 generateBtn.disable = false;
@@ -226,6 +227,79 @@ function createTable(item, index) {
     tr.appendChild(removeContainer);
 
     tBody.appendChild(tr);
+    
+}
+
+
+/*CONVERT STYLE TO LANGUAGE*/
+
+function convertStyleToPolish(style){
+    switch (style){
+        case "anime":
+            style = "Anime";
+            break;
+        case "enhance":
+            style = "Ulepszony";
+            break;
+        case "photographic":
+            style = "Fotograficzny";
+            break;
+        case "digital-art":
+            style = "Sztuka cyfrowa";
+            break;
+        case "comic-book":
+            style = "Komiks";
+            break;
+        case "fantasy-art":
+            style = "Sztuka fantastyczna";
+            break;
+        case "analog-film":
+            style = "Zdjęcie analogowe";
+            break;
+        case "neonpunk":
+            style = "Neonowy";
+            break;
+        case "isometric":
+            style = "Izometryczny";
+            break;
+        case "lowpoly":
+            style = "Lowpoly";
+            break;
+        case "origami":
+            style = "Origami";
+            break;
+        case "line-art":
+            style = "Rysunek kreskowy";
+            break;
+        case "craft-clay":
+            style = "Modelinowy";
+            break;
+        case "3d-model":
+            style = "Model 3D";
+            break;
+        case "pixel-art":
+            style = "Sztuka pikselowa";
+            break;
+        case "texture":
+            style = "Tekstura";
+            break;
+        case "futuristic":
+            style = "Futurystyczny";
+            break;
+        case "realism":
+            style = "Realistyczny";
+            break;
+        case "watercolor":
+            style = "Akwarelowy";
+            break;
+        case "photorealistic":
+            style = "Fotorealistyczny";
+            break;
+        default:
+            style = "Bez stylu"
+            break;
+    }
+    return style;
 }
 
 /* DELETE FUNCTION*/

@@ -42,8 +42,8 @@
                         <option value="landscape">Krajobraz</option>
                     </select>
 
-                    <label for="seed">Ziarno<i class="fa-solid fa-question" title="Numer odpowiadający za inicjalizację generowania obrazu. Wartość domyślna 0 oznacza że program dobierze tą wartość losowo. Jeżeli chcesz stworzyć podobne do siebie obrazy, spróbuj użyć tego samego ziarna kilka razy. Min: 0, Max:9223372036854776000"></i></label>
-                    <input type="number" id="seed" min="0" max="9223372036854776000" value="0" />
+                    <label for="seed">Ziarno<i class="fa-solid fa-question" title="Numer odpowiadający za inicjalizację generowania obrazu. Wartość domyślna 0 oznacza że program dobierze tą wartość losowo. Jeżeli chcesz stworzyć podobne do siebie obrazy, spróbuj użyć tego samego ziarna kilka razy. Min: 0, Max:9223372036854776"></i></label>
+                    <input type="number" id="seed" min="0" max="9007199254740991" value="0" />
 
                     <label for="guidanceScale" title="Określa w jakim stopniu proces generowania grafiki ma być zgodny z podpowiedzią tekstową. Min: 5, Max: 50">Skala wskazówek<i class="fa-solid fa-question"></i></label>
                     <input type="number" id="guidanceScale" min="5" max="50" value="7" />

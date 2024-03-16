@@ -8,9 +8,9 @@ class img {
     }
 }
 
-const firstRowImages = [new img("images/1.png"), new img("images/9.png"), new img("images/16.png"), new img("images/22.png"), new img("images/25.png"), new img("images/96.png"), new img("images/113.png"), new img("images/122.png")];
-const secondRowImages = [new img("images/37.png"), new img("images/44.png"), new img("images/3.png"), new img("images/61.png"), new img("images/59.png"), new img("images/112.png"), new img("images/108.png"), new img("images/118.png")];
-const thirdRowImages = [new img("images/68.png"), new img("images/47.png"), new img("images/51.png"), new img("images/64.png"), new img("images/121.png"), new img("images/110.png"), new img("images/105.png"), new img("images/13.png")];
+const firstRowImages = [new img("images/1.jpg"), new img("images/9.jpg"), new img("images/16.jpg"), new img("images/22.jpg"), new img("images/25.jpg"), new img("images/96.jpg"), new img("images/113.jpg"), new img("images/122.jpg")];
+const secondRowImages = [new img("images/37.jpg"), new img("images/44.jpg"), new img("images/3.jpg"), new img("images/61.jpg"), new img("images/59.jpg"), new img("images/112.jpg"), new img("images/108.jpg"), new img("images/118.jpg")];
+const thirdRowImages = [new img("images/68.jpg"), new img("images/47.jpg"), new img("images/51.jpg"), new img("images/64.jpg"), new img("images/121.jpg"), new img("images/110.jpg"), new img("images/105.jpg"), new img("images/13.jpg")];
 
 /* start */
 for (let i = 0; i < 6; i++) {

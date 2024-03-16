@@ -23,7 +23,7 @@ nav {
     background-color: #ffffff;
     box-shadow: 0 0 10px 0 grey;
     transition: 0.3s;
-    z-index: 1;
+    z-index: 5;
 }
 nav.scrolled {
     height: calc(var(--navHeight) * 1.2);
@@ -125,6 +125,35 @@ h2 {
     to {
         transform: translateX(-10000000px);
     }
+}
+
+#instruction{
+    width: 80%;
+    margin: 100px auto;
+}
+
+h3{
+    font-size: 2rem;
+
+    margin: 30px 0;
+}
+
+h4{
+    margin: 50px 0 10px;
+    font-size: 1.8rem;
+}
+
+#instruction p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#instruction span{
+    font-weight: bold;
+}
+
+#instruction img{
+    width: 100%;
 }
 
 /* Image Generator */
@@ -288,7 +317,7 @@ button:not([disabled="true"]):hover {
     text-align: center;
     box-shadow: 2px 2px 5px 0px;
     transition: 0.3s;
-    z-index: 2;
+    z-index: 5;
     
 }
 
@@ -381,7 +410,7 @@ table img{
     padding: 50px;
     overflow-y: overlay;
     background-color: aliceblue;
-    z-index: 2;
+    z-index: 10;
 }
 
 .showModal{

@@ -1,7 +1,6 @@
 let generatedImagesArray = [];
 
-(getItemsFromLocalStorage() != null) && (getItemsFromLocalStorage() != undefined) ? generatedImagesArray = getItemsFromLocalStorage("images") : generatedImagesArray = [];
-
+getItemsFromLocalStorage() != null && getItemsFromLocalStorage() != undefined ? (generatedImagesArray = getItemsFromLocalStorage("images")) : (generatedImagesArray = []);
 
 class generatedImage {
     constructor(imageSrc, prompt, negtPrompt, style, creationTime, aspectRatio, seed, steps, guidanceScale, safeFilter) {
@@ -54,6 +53,7 @@ closeModalBtn.addEventListener("click", closeModal);
 const modalImage = document.querySelector(".modalImage");
 const modalTableElements = document.querySelectorAll(".modalTable td");
 
+/* This script is responsible for connecting to the external server through monster api and for generating an image */ 
 generateBtn.addEventListener("click", function (e) {
     loader.style.display = "block";
     const prompt = document.getElementById("prompt").value;
@@ -139,8 +139,8 @@ generateBtn.addEventListener("click", function (e) {
                                 } else {
                                     aspectRatio = "Krajobraz";
                                 }
-                                
-                                generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, style = convertStyleToPolish(style), `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter));
+
+                                generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, (style = convertStyleToPolish(style)), `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter));
                                 pushItemsToLocalStorage();
                                 updateTable();
                                 generateBtn.disable = false;
@@ -180,11 +180,11 @@ function updateTable(phrase) {
         generatedImagesArray.forEach((item, index) => {
             if (item.prompt.includes(phrase) && searchSelect.value == "prompt") {
                 createTable(item, index);
-            } else if(item.negPrompt.includes(phrase) && searchSelect.value == "negprompt"){
+            } else if (item.negPrompt.includes(phrase) && searchSelect.value == "negprompt") {
                 createTable(item, index);
-            } else if(item.creationTime.includes(phrase) && searchSelect.value == "creationTime"){
+            } else if (item.creationTime.includes(phrase) && searchSelect.value == "creationTime") {
                 createTable(item, index);
-            } 
+            }
         });
     }
 }
@@ -227,14 +227,12 @@ function createTable(item, index) {
     tr.appendChild(removeContainer);
 
     tBody.appendChild(tr);
-    
 }
 
+/*CONVERT STYLE TO POLISH LANGUAGE*/
 
-/*CONVERT STYLE TO LANGUAGE*/
-
-function convertStyleToPolish(style){
-    switch (style){
+function convertStyleToPolish(style) {
+    switch (style) {
         case "anime":
             style = "Anime";
             break;
@@ -296,7 +294,7 @@ function convertStyleToPolish(style){
             style = "Fotorealistyczny";
             break;
         default:
-            style = "Bez stylu"
+            style = "Bez stylu";
             break;
     }
     return style;
@@ -324,8 +322,6 @@ function addToFavourites() {
     updateTable();
 }
 
-
-
 /* MODAL FUNCTIONS*/
 
 function openModal() {
@@ -341,12 +337,14 @@ function openModal() {
     modalTableElements[7].textContent = generatedImagesArray[imgIndex].steps;
     modalTableElements[8].textContent = generatedImagesArray[imgIndex].safeFilter;
 
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("unscrollable");
+    // document.body.style.overflow = "hidden";
     modal.classList.add("showModal");
 }
 
 function closeModal() {
-    document.body.style.overflow = "visible";
+    // document.body.style.overflow = "visible";
+    document.body.classList.remove("unscrollable");
     modal.classList.remove("showModal");
     if (modalContent.classList.contains("active")) {
         setTimeout(zoom, 500);
@@ -386,43 +384,28 @@ function stopDragging() {
     isWindowDraggable = false;
 }
 
-function pushItemsToLocalStorage(){
-    localStorage.setItem("images", JSON.stringify(generatedImagesArray))
+/* LOCAL STORAGE FUNCTIONS */
+function pushItemsToLocalStorage() {
+    localStorage.setItem("images", JSON.stringify(generatedImagesArray));
 }
 
-function getItemsFromLocalStorage(){
+function getItemsFromLocalStorage() {
     return JSON.parse(localStorage.getItem("images"));
 }
 
-function getImageDataFromSessionStorage(){
-    if(sessionStorage.copiedData != undefined){
+function getImageDataFromSessionStorage() {
+    if (sessionStorage.copiedData != undefined) {
         let sessionObj = JSON.parse(sessionStorage.copiedData);
-        console.log(sessionObj)
+        console.log(sessionObj);
 
-        document.getElementById("prompt").value = sessionObj.prompt
-        document.getElementById("negprompt").value = sessionObj.negprompt
-    } 
+        document.getElementById("prompt").value = sessionObj.prompt;
+        document.getElementById("negprompt").value = sessionObj.negprompt;
+    }
 }
 
 /* START */
 
-    
-    
-    
-
 updateTable();
 getImageDataFromSessionStorage();
 
-
-
-/* START */ 
-
-/* GENERATING TEST DATA*/
-
-function addTestData() {
-    generatedImagesArray.push(new generatedImage("../images/0.jpg", `cinematic film still cinematic still no humans, glowing, space, fflix_dmatter . emotional, harmonious, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy", "no humans, glowing, space, fflix_dmatter, extremely detailed, drawn by ruan jia, ruan jia, greg rutkowski, cinematic, artstation, key art, hyperrealism, octane render, 8 k. shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy`, `anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, verybadimagenegative_v1.3, ng_deepnegative_v1_75t, easynegative, (worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), bad anatomy, tooth, open mouth, bad hand, bad fingers, watermark, deformed, distorted, disfigured, poorly drawn,`, "no style", "8.7s", "kwadrat", 123187163584, 50, 7, false));
-    generatedImagesArray.push(new generatedImage("../images/17.jpg", "asdasdas", "", "no style", "3.8s", "portret", 8697465651, 50, 10, false));
-    generatedImagesArray.push(new generatedImage("../images/68.jpg", "prompt prompt prompt", "", "futuristic", "8.8s", "landscape", 189745261, 50, 15, false));
-    updateTable();
-}
-// addTestData();
+/* START */

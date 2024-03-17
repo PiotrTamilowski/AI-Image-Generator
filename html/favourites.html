@@ -5,16 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Piotr Tamiłowski" />
         <meta name="description" content="This website allows you to generate images based on your prompt" />
-        <link rel="icon" type="image/x-icon" href="./Logo/favicon.PNG" />
+        <link rel="icon" type="image/x-icon" href="../Logo/favicon.PNG" />
         <title>AI Image Generator</title>
         <script src="https://kit.fontawesome.com/9efd4ac438.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="./../css/main.css" />
+        <link rel="stylesheet" href="./../css/favourites.css" />
     </head>
     <body>
         <nav>
-            <a href="index.html">
-                <img src="Logo/black.png" alt="Logo AI Image Generator" />
-                <img src="Logo/blue.png" alt="Logo AI Image Generator" />
+            <a href="../index.html">
+                <img src="../Logo/black.png" alt="Logo AI Image Generator" />
+                <img src="../Logo/blue.png" alt="Logo AI Image Generator" />
             </a>
             <div>
                 <a href="generator.html">Generator Obrazów</a>
@@ -22,14 +23,17 @@
                 <a href="favourites.html">Ulubione</a>
             </div>
         </nav>
-
-        <div id="wrapper">
-            <div class="flexFavourites">
-                
-            </div>
+        <div class="hamburgerContainer">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
         </div>
 
-        <script src="js/nav.js"></script>
-        <script src="js/favourites.js"></script>
+        <div id="wrapper">
+            <div class="flexFavourites"></div>
+        </div>
+        <footer>Copyright &#169; AI Image Generator 2024</footer>
+        <script src="../js/nav.js"></script>
+        <script src="../js/favourites.js"></script>
     </body>
 </html>

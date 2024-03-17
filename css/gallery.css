@@ -1,0 +1,78 @@
+.copyMessage {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+    box-shadow: 8px 3px 8px 0px black;
+    z-index: 1;
+}
+
+.copyMessageAnimationTrigger {
+    animation: copyMessageAnimation 3s;
+}
+
+.flexGallery {
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5vw;
+}
+.flexColumn img {
+    transition: filter 0.3s;
+    width: 100%;
+    margin: 0.5vw 0;
+}
+.flexColumn img:hover {
+    filter: brightness(0.7);
+}
+
+@keyframes copyMessageAnimation {
+    0% {
+        top: -100px;
+    }
+    20% {
+        top: 100px;
+    }
+    80% {
+        top: 100px;
+    }
+    100% {
+        top: -100px;
+    }
+}
+
+/* MEDIA QUERIES FOR COLUMN NUMBER CHANGE*/
+@media (max-width: 1600px) {
+    .flexColumn:nth-of-type(5) {
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .flexGallery {
+        width: 100%;
+    }
+    .flexColumn:nth-of-type(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .flexColumn:nth-of-type(3) {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .flexColumn:nth-of-type(2) {
+        display: none;
+    }
+}

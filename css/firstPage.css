@@ -1,0 +1,112 @@
+/* Title */
+.slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - var(--navHeight));
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+.slogan a {
+    display: inline-block;
+    margin: 30px 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid;
+    transition: 0.5s;
+}
+
+.slogan a:hover {
+    background-color: #00c2ff;
+}
+
+/* Carousel */
+.carousel div {
+    display: flex;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+.carousel img {
+    position: absolute;
+    left: 0px;
+    margin: 5px 5px;
+}
+.carousel .firstLine img {
+    animation: anim 1000000s linear;
+}
+.carousel .secondLine img {
+    animation: anim 500000s linear;
+}
+.carousel .thirdLine img {
+    animation: anim 750000s linear;
+}
+
+/* Instruction */
+
+#instruction {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0;
+}
+
+h3 {
+    font-size: 2rem;
+
+    margin: 30px 0;
+}
+
+h4 {
+    margin: 50px 0 10px;
+    font-size: 1.8rem;
+}
+
+#instruction p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#instruction span {
+    font-weight: bold;
+}
+
+#instruction img {
+    margin-top: 15px;
+    width: 100%;
+    box-shadow: 0 0 25px 5px black;
+}
+
+#instruction img:nth-of-type(1) {
+    box-shadow: 0 0 10px 0px black;
+}
+
+@keyframes anim {
+    to {
+        transform: translateX(-10000000px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .slogan {
+        height: 100vh;
+        width: 95%;
+        margin: auto;
+    }
+
+    .carousel div {
+        height: 120px;
+    }
+
+    #instruction {
+        width: 95%;
+    }
+}

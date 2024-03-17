@@ -5,7 +5,9 @@ const flexFavourites = document.querySelector(".flexFavourites");
 /* START */
 getItemsFromLocalStorage() != null && getItemsFromLocalStorage() != undefined ? (allStoredImages = getItemsFromLocalStorage("images")) : (allStoredImages = []);
 createImages();
+/* START */
 
+/* This function insert images based on what was stored in user's local storage */
 function createImages() {
     flexFavourites.innerHTML = "";
     allStoredImages.forEach((item, index) => {
@@ -26,6 +28,8 @@ function createImages() {
     });
 }
 
+/* LOCAL STORAGE FUNCTIONS */
+
 function getItemsFromLocalStorage() {
     return JSON.parse(localStorage.getItem("images"));
 }
@@ -43,15 +47,5 @@ function addToFavourites() {
         }
         pushItemsToLocalStorage();
         createImages();
-
     });
-
-    // let arrayIndex = Number(this.parentNode.parentNode.childNodes[0].textContent) - 1;
-    // if (generatedImagesArray[arrayIndex].favourite == false) {
-    //     generatedImagesArray[arrayIndex].favourite = true;
-    // } else {
-    //     generatedImagesArray[arrayIndex].favourite = false;
-    // }
-    // pushItemsToLocalStorage();
-    // updateTable();
 }

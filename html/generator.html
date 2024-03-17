@@ -6,18 +6,19 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta name="author" content="Piotr Tamiłowski" />
             <meta name="description" content="This website allows you to generate images based on your prompt" />
-            <link rel="icon" type="image/x-icon" href="./Logo/favicon.PNG" />
+            <link rel="icon" type="image/x-icon" href="../Logo/favicon.PNG" />
             <title>AI Image Generator</title>
             <script src="https://kit.fontawesome.com/9efd4ac438.js" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="../css/main.css" />
+            <link rel="stylesheet" href="../css/imageGenerator.css" />
         </head>
     </head>
     <body>
         <nav>
-            <a href="index.html">
-                <img src="Logo/black.png" alt="Logo AI Image Generator" />
-                <img src="Logo/blue.png" alt="Logo AI Image Generator" />
+            <a href="../index.html">
+                <img src="../Logo/black.png" alt="Logo AI Image Generator" />
+                <img src="../Logo/blue.png" alt="Logo AI Image Generator" />
             </a>
             <div>
                 <a href="generator.html">Generator Obrazów</a>
@@ -25,6 +26,11 @@
                 <a href="favourites.html"> Ulubione</a>
             </div>
         </nav>
+        <div class="hamburgerContainer">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
 
         <div id="wrapper">
             <div class="flex">
@@ -50,27 +56,27 @@
 
                     <label for="style">Styl</label>
                     <select id="style" class="pointer">
-                        <option value="no style" default>No style</option>
-                        <option value="enhance">Enhance</option>
+                        <option value="no style" default>Bez stylu</option>
+                        <option value="enhance">Ulepszony</option>
                         <option value="anime">Anime</option>
-                        <option value="photographic">Photographic</option>
-                        <option value="digital-art">Digital-art</option>
-                        <option value="comic-book">Comic-book</option>
-                        <option value="fantasy-art">Fantasy-art</option>
-                        <option value="analog-film">Analog-film</option>
-                        <option value="neonpunk">Neonpunk</option>
-                        <option value="isometric">Isometric</option>
+                        <option value="photographic">Fotograficzny</option>
+                        <option value="digital-art">Sztuka cyfrowa</option>
+                        <option value="comic-book">Komiks</option>
+                        <option value="fantasy-art">Sztuka fantastyczna</option>
+                        <option value="analog-film">Zdjęcie analogowe</option>
+                        <option value="neonpunk">Neonowy</option>
+                        <option value="isometric">Izometryczny</option>
                         <option value="lowpoly">Lowpoly</option>
                         <option value="origami">Origami</option>
-                        <option value="line-art">Line-art</option>
-                        <option value="craft-clay">Craft-clay</option>
-                        <option value="3d-model">3D-model</option>
-                        <option value="pixel-art">Pixel-art</option>
-                        <option value="texture">Texture</option>
-                        <option value="futuristic">Futuristic</option>
-                        <option value="realism">Realism</option>
-                        <option value="watercolor">Watercolor</option>
-                        <option value="photorealistic">Photorealistic</option>
+                        <option value="line-art">Rysunek kreskowy</option>
+                        <option value="craft-clay">Modelinowy</option>
+                        <option value="3d-model">Model 3D</option>
+                        <option value="pixel-art">Sztuka pikselowa</option>
+                        <option value="texture">Tekstura</option>
+                        <option value="futuristic">Futurystyczny</option>
+                        <option value="realism">Realistyczny</option>
+                        <option value="watercolor">Akwarelowy</option>
+                        <option value="photorealistic">Fotorealistyczny</option>
                     </select>
 
                     <label for="steps">Liczba kroków <i class="fa-solid fa-question" title="Wieksza liczba kroków może przyczynić się do lepszej jakości wygenerowanego obrazu, ale także wydłuża czas oczekiwania. Min: 10, Max: 100"></i></label>
@@ -105,7 +111,7 @@
                     <option value="creationTime">Czas tworzenia</option>
                 </select>
                 <p>Wyszukaj po</p>
-                <input type="text" class="searchInput">
+                <input type="text" class="searchInput" />
             </div>
             <div id="tableContainer">
                 <table>
@@ -120,9 +126,7 @@
                             <th>Usuń</th>
                         </tr>
                     </thead>
-                    <tbody>
-
-                    </tbody>
+                    <tbody></tbody>
                 </table>
             </div>
         </div>
@@ -172,7 +176,8 @@
                 </table>
             </div>
         </div>
-        <script src="js/nav.js"></script>
-        <script src="js/imageGeneration.js"></script>
+        <footer>Copyright &#169; AI Image Generator 2024</footer>
+        <script src="../js/nav.js"></script>
+        <script src="../js/imageGeneration.js"></script>
     </body>
 </html>

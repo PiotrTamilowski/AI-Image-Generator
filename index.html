@@ -7,7 +7,8 @@
         <meta name="description" content="This website allows you to generate images based on your prompt" />
         <link rel="icon" type="image/x-icon" href="./Logo/favicon.PNG" />
         <title>AI Image Generator</title>
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/firstPage.css" />
     </head>
     <body>
         <nav>
@@ -16,17 +17,22 @@
                 <img src="Logo/blue.png" alt="Logo AI Image Generator" />
             </a>
             <div>
-                <a href="generator.html">Generator Obrazów</a>
-                <a href="gallery.html">Galeria</a>
-                <a href="favourites.html">Ulubione</a>
+                <a href="html/generator.html">Generator Obrazów</a>
+                <a href="html/gallery.html">Galeria</a>
+                <a href="html/favourites.html">Ulubione</a>
             </div>
         </nav>
+        <div class="hamburgerContainer">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
         <div id="wrapper">
             <div class="slogan">
                 <h1>Twórz grafiki przy użyciu AI</h1>
                 <h2>Dzięki naszym rozwiązaniom zmienisz swoje pomysły w rzeczywistość</h2>
                 <div>
-                    <a href="generator.html">Przejdź do generatora</a>
+                    <a href="html/generator.html">Przejdź do generatora</a>
                     <a href="#instruction">Sprawdź instrukcję</a>
                 </div>
             </div>
@@ -38,21 +44,20 @@
             <div id="instruction">
                 <article>
                     <h3>Stable Diffusion XL to jeden z najpopularniejszych generatorów obrazów wykorzystujących sztuczną inteligencję</h3>
-                    <p>Na podstawie promptu (opisu tekstowego), jest w stanie wygenerować grafiki o rozmaitych stylach</p>
+                    <p>Na podstawie promptu (polecenia tekstowego), jest w stanie wygenerować grafiki o rozmaitych stylach</p>
                 </article>
                 <article>
                     <h3>Jak Korzystać?</h3>
-                    <p>Przejdź do podstrony "Generator Obrazów" - odnośnik znajdziesz na pasku nawigacji</p>
-                    <img src="images/instruction.jpg" alt="">
-                    <p>W celu wygenerowania obrazu wypełnij formularz znajdujący się po lewej stronie ekranu</p>
+                    <p>Przejdź do podstrony "Generator Obrazów" i wypełnij formularz znajdujący się po lewej stronie ekranu</p>
+                    <img src="images/instruction.jpg" alt="" />
                     <p>Poniżej znajdziesz informacje odnośnie tego co oznaczają poszczególne pola i jakie wartości przyjmują</p>
 
                     <h4>Polecenie</h4>
-                    <p>Jest polem, w którym należy wprowadzić opis obrazu w języku angielskim. Może to być jedno słowo, kilka zdań, lub zbiór krótkich fraz oddzielonych przecinkami. Najlepszy efekt osiągniemy pisząc zaawansowane polecenia uwzględniające poniższe elementy naszego obrazu: </p>
+                    <p>Jest polem, w którym należy wprowadzić opis obrazu w języku angielskim. Może to być jedno słowo, kilka zdań, lub zbiór krótkich fraz oddzielonych przecinkami. Najlepszy efekt osiągniemy pisząc zaawansowane polecenia uwzględniające poniższe elementy naszego obrazu:</p>
                     <p><span>Obiekt:</span> postać, zwierzę, miejsce, przedmiot i tym podobne</p>
                     <p><span>Technika:</span> zdjęcie, obraz, ilustracja, rzeźba, rysunek, gobelin i tym podobne</p>
                     <p><span>Otoczenie:</span> w mieszkaniu, na ulicy, w ogrodzie, pod wodą, w zatłoczonym mieście</p>
-                    <p><span>Oświetlenie:</span> miękkie, neonowe, abient, studyjne i tym podobne</p>
+                    <p><span>Oświetlenie:</span> miękkie, neonowe, ambient, studyjne i tym podobne</p>
                     <p><span>Kolor:</span> jaskrawy, stonowany, ciemny, czarno-biały, pastelowy</p>
                     <p><span>Nastrój:</span> radosny, ponury, spokojny, melancholijny i tym podobny</p>
                     <p><span>Kompozycja:</span> portret, ujecie z góry, panorama i tym podobne</p>
@@ -68,26 +73,26 @@
 
                     <h4>Ziarno</h4>
                     <p>Jest parametrem określającym inicjalizację obrazu. Użytkownik nie musi zmieniać tego paramteru, ponieważ domyślna wartość 0 oznacza, że program wygeneruje losową liczbę, odpowiadającą zakresowi pomiędzy 1 a 9007199254740991. Ręczne wpisanie numeru ziarna ma jednak swoje zalety. Jeżeli użyjemy tego samego ziarna i dodamy lub usuniemy jakiś element z naszego polecenia to otrzymamy zmodyfikowany obraz, który powinien być zbliżony do oryginału</p>
-                    <img src="images/instruction2.jpg" alt="">
+                    <img src="images/instruction2.jpg" alt="" />
 
                     <h4>Skala wskazówek</h4>
                     <p>Określa jak bardzo generator powinien trzymać się tekstowego polecenia. Mniejsze wartości tego atrybutu oznaczają, że generator będzie bardziej kreatywny w tworzeniu nowego obrazu, ale mniej dokładny w odwzorowywaniu wszystkich elementów przekazanych w poleceniu</p>
 
                     <h4>Styl</h4>
-                    <p>Pozwala na wybranie z listy jednego z dostępnych styli generowania obrazu. Do wyboru są następujące opcje: Bez stylu, Ulepszony, Fotograficzny, Sztuka cyfrowa, Komiks, Sztuka fantastyczna, Zdjęcie analogowe, Neonowy, Izometryczny, Lowpoly, Origami, Rysunek kreskowy, Modelinowy, Model 3D, Sztuka pikselowa, Tekstura, Futurystyczny, Realistyczny, Akwarelowy, Fotorealistyczny</p>
-                    
+                    <p>Pozwala na wybranie z listy jednego z dostępnych styli generowania obrazu. Do wyboru są następujące opcje: Bez stylu, Ulepszony, Fotograficzny, Sztuka cyfrowa, Komiks, Sztuka fantastyczna, Zdjęcie analogowe, Neonowy, Izometryczny, Lowpoly, Origami, Rysunek kreskowy, Modelinowy, Model 3D, Sztuka pikselowa, Tekstura, Futurystyczny, Realistyczny, Akwarelowy, Fotorealistyczny. Używając tego samego polecenia i ziarna, ale innego stylu, możemy wygenerować zbliżony do pierwowzoru obraz stworzony inną techniką</p>
+                    <img src="images/instruction3.jpg" alt="" />
 
                     <h4>Liczba kroków</h4>
-                    <p>Stable Diffusion XL jest modelem dyfuzyjnym, co oznacza że na początku generowania obrazu, nakładany jest losowy szum, który później z każdą kolejną iteracją jest częściowo usuwany, co zapewnia wyższą jakość obrazu. Liczba kroków pozwala nam określić ile takich iteracji generator powinien wykonać. Ustawienie dużej liczby kroków, może pozwolić nam na wygenerowanie obrazów o wysokiej jakości, jednakże wpływa także na czas oczekiwania oraz koszt wygenerowanego obrazu</p>
+                    <p>Stable Diffusion XL jest modelem dyfuzyjnym, co oznacza że na początku generowania obrazu, nakładany jest losowy szum, który później z każdą kolejną iteracją jest częściowo usuwany, co zapewnia wyższą jakość obrazu. Liczba kroków pozwala nam określić ile takich iteracji generator powinien wykonać. Ustawienie dużej liczby kroków, może pozwolić nam na wygenerowanie obrazów o wysokiej jakości, jednakże wpływa na czas oczekiwania oraz koszt wygenerowanego obrazu</p>
 
                     <h4>Bezpieczny filtr</h4>
                     <p>Gdy bezpieczny filtr będzie zaznaczony, model będzie aktywnie odfiltrowywać wszlkie potencjalne treści NSFW (nieodpowiednie w pracy), zapewniając użytkownikom bezpieczeniejsze i bardziej odpowiednie doznania</p>
-
                 </article>
             </div>
         </div>
+        <footer>Copyright &#169; AI Image Generator 2024</footer>
         <script src="js/nav.js"></script>
         <script src="js/carousel.js"></script>
-        
+        <script src="js/mobileImages.js"></script>
     </body>
 </html>

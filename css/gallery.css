@@ -32,8 +32,22 @@
     width: 100%;
     margin: 0.5vw 0;
 }
-.flexColumn img:hover {
-    filter: brightness(0.7);
+.flexColumn div:hover img {
+    filter: brightness(0.5);
+}
+.flexColumn i.fa-copy{
+    visibility: hidden;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 35px;
+    color: white;
+}
+.flexColumn div:hover i.fa-copy{
+    visibility: visible;
+}
+i.fa-copy:hover{
+    color: #00c2ff;
 }
 
 @keyframes copyMessageAnimation {

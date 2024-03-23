@@ -53,7 +53,7 @@ closeModalBtn.addEventListener("click", closeModal);
 const modalImage = document.querySelector(".modalImage");
 const modalTableElements = document.querySelectorAll(".modalTable td");
 
-/* This script is responsible for connecting to the external server through monster api and for generating an image */ 
+/* This script is responsible for connecting to the external server through monster api and for generating an image */
 generateBtn.addEventListener("click", function (e) {
     loader.style.display = "block";
     const prompt = document.getElementById("prompt").value;
@@ -106,8 +106,6 @@ generateBtn.addEventListener("click", function (e) {
         axios
             .request(options)
             .then(function (response) {
-                console.log(response.data);
-
                 if (response.data.message == "Request accepted successfully") {
                     const options2 = {
                         method: "GET",
@@ -120,8 +118,6 @@ generateBtn.addEventListener("click", function (e) {
 
                     let inv = setInterval(function () {
                         axios.request(options2).then(function (response2) {
-                            console.log(response2.data);
-
                             if (response2.data.status == "IN_QUEUE") {
                                 loadingStatus.textContent = "Oczekuję w kolejce...";
                             } else if (response2.data.status == "IN_PROGRESS") {
@@ -177,12 +173,13 @@ function updateTable(phrase) {
             createTable(item, index);
         });
     } else {
+        phrase = phrase.toLowerCase();
         generatedImagesArray.forEach((item, index) => {
-            if (item.prompt.includes(phrase) && searchSelect.value == "prompt") {
+            if (item.prompt.toLowerCase().includes(phrase) && searchSelect.value == "prompt") {
                 createTable(item, index);
-            } else if (item.negPrompt.includes(phrase) && searchSelect.value == "negprompt") {
+            } else if (item.negPrompt.toLowerCase().includes(phrase) && searchSelect.value == "negprompt") {
                 createTable(item, index);
-            } else if (item.creationTime.includes(phrase) && searchSelect.value == "creationTime") {
+            } else if (item.creationTime.toLowerCase().includes(phrase) && searchSelect.value == "creationTime") {
                 createTable(item, index);
             }
         });
@@ -338,12 +335,10 @@ function openModal() {
     modalTableElements[8].textContent = generatedImagesArray[imgIndex].safeFilter;
 
     document.body.classList.add("unscrollable");
-    // document.body.style.overflow = "hidden";
     modal.classList.add("showModal");
 }
 
 function closeModal() {
-    // document.body.style.overflow = "visible";
     document.body.classList.remove("unscrollable");
     modal.classList.remove("showModal");
     if (modalContent.classList.contains("active")) {
@@ -370,14 +365,14 @@ function closeSearchWindow() {
 
 let isWindowDraggable = false;
 function dragWindow(e) {
+    e.preventDefault();
     if (isWindowDraggable) {
         searchWindow.style.top = `${e.clientY - 15}px`;
         searchWindow.style.left = `${e.clientX - 110}px`;
-        // searchWindow.style.top = e.clientY + "px";
-        // searchWindow.style.left = e.clientX  + "px";
     }
 }
 function startDragging() {
+    
     isWindowDraggable = true;
 }
 function stopDragging() {
@@ -396,7 +391,6 @@ function getItemsFromLocalStorage() {
 function getImageDataFromSessionStorage() {
     if (sessionStorage.copiedData != undefined) {
         let sessionObj = JSON.parse(sessionStorage.copiedData);
-        console.log(sessionObj);
 
         document.getElementById("prompt").value = sessionObj.prompt;
         document.getElementById("negprompt").value = sessionObj.negprompt;

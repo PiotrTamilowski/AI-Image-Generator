@@ -31,7 +31,6 @@ function addElements(arr, container) {
         } else {
             newImg.style.left = document.querySelector(`.carousel .${container.getAttribute("class")} img:last-of-type`).getBoundingClientRect().right + "px";
         }
-        // newImg.style.width = "140px";
         newImg.style.width = firstRow.offsetHeight + "px";
         container.appendChild(newImg);
     });

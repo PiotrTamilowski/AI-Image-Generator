@@ -223,12 +223,20 @@ function changeColumnNumbers() {
 
     let columnIndex = 0;
     for (let i = 0; i < imageTable.length; i++) {
+        const newDiv = document.createElement("div");
         const newImg = document.createElement("img");
+        const copyIcon = document.createElement("i");
+        newDiv.style.position = "relative";
         newImg.src = imageTable[i].src;
-        newImg.addEventListener("click", setImageDataToSessionStorage);
-        newImg.addEventListener("click", copyMessageAnimation);
-        newImg.classList.add("pointer");
-        flexColumns[columnIndex].appendChild(newImg);
+        copyIcon.classList.add("fa-solid", "fa-copy", "pointer");
+        copyIcon.addEventListener("click", setImageDataToSessionStorage);
+        copyIcon.addEventListener("click", copyMessageAnimation);
+        
+
+        
+        newDiv.appendChild(newImg);
+        newDiv.appendChild(copyIcon);
+        flexColumns[columnIndex].appendChild(newDiv);
 
         columnIndex++;
         if (columnIndex % columnNumbers == 0) {
@@ -241,9 +249,11 @@ function changeColumnNumbers() {
 function setImageDataToSessionStorage() {
     let indexOfSearchedItem;
     imageTable.forEach((item, index) => {
-        if (item.src == this.getAttribute("src")) {
+        if (item.src == this.parentNode.childNodes[0].getAttribute("src")) {
             indexOfSearchedItem = index;
+            
         }
+        
     });
     sessionStorage.setItem("copiedData", JSON.stringify(imageTable[indexOfSearchedItem]));
 }

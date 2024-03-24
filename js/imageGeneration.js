@@ -69,7 +69,7 @@ generateBtn.addEventListener("click", function (e) {
 
     if (prompt.length > 0 && seed >= 0 && seed <= 9007199254740991 && guidanceScale >= 5 && guidanceScale <= 50 && steps >= 10 && steps <= 100) {
         e.preventDefault();
-        generateBtn.disable = true;
+        generateBtn.disabled = true;
         loaderContainer.style.display = "flex";
         loadingStatus.textContent = "Łączę się z serwerem...";
         generatedImg.src = "";
@@ -139,11 +139,13 @@ generateBtn.addEventListener("click", function (e) {
                                 generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, (style = convertStyleToPolish(style)), `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter));
                                 pushItemsToLocalStorage();
                                 updateTable();
-                                generateBtn.disable = false;
+                                generateBtn.disabled = false;
+                                const notification = new Notification("AI Image Generator", { body: "Twój obraz został wygenerowany", icon: "../Logo/favicon.PNG" })
+                                
                             } else if ((response2.data.status = "FAILED")) {
                                 clearInterval(inv);
                                 clearInterval(timer);
-                                generateBtn.disable = false;
+                                generateBtn.disabled = false;
                                 loader.style.display = "none";
                                 if ((response2.data.errorMessage = "The provided prompt contains NSFW content. Please provide a clean prompt")) {
                                     loadingStatus.textContent = "Twoje polecenie zawiera treści zablokowane przez filtr NSFW. Jeżeli mimo to chcesz wygenerować taki obraz, wyłacz bezpieczny filtr";
@@ -155,7 +157,7 @@ generateBtn.addEventListener("click", function (e) {
                     }, 1000);
                 } else {
                     loadingStatus.textContent = "Wystąpił Błąd: " + response.data.message;
-                    generateBtn.disable = false;
+                    generateBtn.disabled = false;
                 }
             })
             .catch(function (error) {

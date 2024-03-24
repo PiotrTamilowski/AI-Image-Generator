@@ -310,6 +310,10 @@ table img {
         display: none;
     }
 
+    .searchWindow{
+        transform: translateX(-50%);
+    }
+
     table img {
         max-width: none;
     }
@@ -332,5 +336,12 @@ table img {
     }
     .modalTable th {
         min-width: auto;
+    }
+}
+
+
+@media (max-width: 1000px) and (orientation: landscape){
+    .settings{
+        min-height: auto;
     }
 }

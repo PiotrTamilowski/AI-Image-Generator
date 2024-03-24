@@ -1,3 +1,4 @@
+Notification.requestPermission();
 const firstRow = document.querySelector(".carousel .firstLine");
 const secondRow = document.querySelector(".carousel .secondLine");
 const thirdRow = document.querySelector(".carousel .thirdLine");

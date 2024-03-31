@@ -33,6 +33,10 @@
     .flexFavourites article {
         height: 200px;
     }
+    .flexFavourites i{
+        right: auto;
+        left: 10px;
+    }
     
     
 }

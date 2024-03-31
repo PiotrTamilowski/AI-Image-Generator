@@ -228,7 +228,7 @@ table img {
     padding: 50px;
     overflow-y: overlay;
     background-color: aliceblue;
-    z-index: 10;
+    z-index: 20;
 }
 
 .showModal {

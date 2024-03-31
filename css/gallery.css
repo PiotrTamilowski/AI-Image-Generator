@@ -79,11 +79,18 @@ i.fa-copy:hover{
         display: none;
     }
 }
+@media (max-width: 1000px){
+    .flexColumn i.fa-copy{
+        left: 10px;
+        right: auto;
+    }
+}
 
 @media (max-width: 900px) {
     .flexColumn:nth-of-type(3) {
         display: none;
     }
+    
 }
 @media (max-width: 600px) {
     .flexColumn:nth-of-type(2) {

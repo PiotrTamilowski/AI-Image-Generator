@@ -80,7 +80,7 @@ generateBtn.addEventListener("click", function (e) {
             loadingTime.textContent = timePassed.toFixed(1);
         }, 100);
 
-        const API_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjlhNTJhNzY1ZjBkODMzMzM5ZWE3OTk2NjY0ZmVlYjg4IiwiY3JlYXRlZF9hdCI6IjIwMjQtMDEtMjBUMTI6NTE6MzAuMjU4NTkwIn0.yUj8CyQbPUuQ186Rw9o4n8I6-pg_eTlrGblSFyKylxU";
+        const API_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjlhNTJhNzY1ZjBkODMzMzM5ZWE3OTk2NjY0ZmVlYjg4IiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMjlUMTk6NTg6MDUuNjM0NzM3In0.novRzvLtsBLNGyPSGlE8j7C3-xcAYQcSzRrI_XNbBsg";
         const options = {
             method: "POST",
             url: "https://api.monsterapi.ai/v1/generate/sdxl-base",

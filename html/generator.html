@@ -36,16 +36,13 @@
             <div class="flex">
                 <form class="settings">
                     <label for="prompt">Polecenie</label>
-                    <textarea id="prompt" maxlength="1000" rows="10" placeholder="Wprowadź opis obrazu, który ma zostać wygenerowany. Użyj języka angielskiego" required></textarea>
-
-                    <label for="negprompt">Negacja</label>
-                    <textarea id="negprompt" maxlength="1000" rows="10" placeholder="Wprowadź właściwości obrazu, których generator ma unikać. Uzyj języka angielskiego"></textarea>
+                    <textarea id="prompt" maxlength="1000" rows="20" placeholder="Wprowadź opis obrazu, który ma zostać wygenerowany. Użyj języka angielskiego" required></textarea>
 
                     <label for="aspectRatio">Wymiar</label>
                     <select id="aspectRatio" class="pointer">
-                        <option value="square" default>Kwadrat</option>
-                        <option value="portrait">Portret</option>
-                        <option value="landscape">Krajobraz</option>
+                        <option value="Kwadrat" default>Kwadrat</option>
+                        <option value="Portret">Portret</option>
+                        <option value="Krajobraz">Krajobraz</option>
                     </select>
 
                     <label for="seed">Ziarno<i class="fa-solid fa-question" title="Numer odpowiadający za inicjalizację generowania obrazu. Wartość domyślna 0 oznacza że program dobierze tą wartość losowo. Jeżeli chcesz stworzyć podobne do siebie obrazy, spróbuj użyć tego samego ziarna kilka razy. Min: 0, Max:9223372036854776"></i></label>
@@ -54,8 +51,8 @@
                     <label for="guidanceScale" title="Określa w jakim stopniu proces generowania grafiki ma być zgodny z podpowiedzią tekstową. Min: 5, Max: 50">Skala wskazówek<i class="fa-solid fa-question"></i></label>
                     <input type="number" id="guidanceScale" min="5" max="50" value="7" />
 
-                    <label for="style">Styl</label>
-                    <select id="style" class="pointer">
+                    <label for="style">Styl<i class="fa-solid fa-question" title="Opcja akutalnie niedostępna. Spróbuj opisać styl bezpośrednio w polu Polecenie"></i></label>
+                    <select id="style" class="pointer" disabled>
                         <option value="no style" default>Bez stylu</option>
                         <option value="enhance">Ulepszony</option>
                         <option value="anime">Anime</option>
@@ -80,7 +77,7 @@
                     </select>
 
                     <label for="steps">Liczba kroków <i class="fa-solid fa-question" title="Wieksza liczba kroków może przyczynić się do lepszej jakości wygenerowanego obrazu, ale także wydłuża czas oczekiwania. Min: 10, Max: 100"></i></label>
-                    <input type="number" id="steps" min="10" max="100" value="50" />
+                    <input type="number" id="steps" min="10" max="30" value="30" />
 
                     <div class="safefilterContainer">
                         <label for="safefilter">Bezpieczny filtr</label>
@@ -107,7 +104,6 @@
                 <p>Wyszukaj w kolumnie:</p>
                 <select name="" class="searchSelect">
                     <option value="prompt">Polecenie</option>
-                    <option value="negprompt">Negacja</option>
                     <option value="creationTime">Czas tworzenia</option>
                 </select>
                 <p>Wyszukaj po</p>
@@ -120,7 +116,6 @@
                             <th>Lp</th>
                             <th>Obraz</th>
                             <th>Polecenie</th>
-                            <th>Negacja</th>
                             <th>Czas tworzenia</th>
                             <th>Ulubione</th>
                             <th>Usuń</th>
@@ -139,14 +134,6 @@
                 <table class="modalTable">
                     <tr>
                         <th>Polecenie</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>Negacja</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>Styl</th>
                         <td></td>
                     </tr>
                     <tr>
@@ -176,7 +163,7 @@
                 </table>
             </div>
         </div>
-        <footer>Copyright &#169; AI Image Generator 2024</footer>
+        <footer>Copyright &#169; AI Image Generator 2025</footer>
         <script src="../js/nav.js"></script>
         <script src="../js/imageGeneration.js"></script>
     </body>

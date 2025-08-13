@@ -3,11 +3,9 @@ let generatedImagesArray = [];
 getItemsFromLocalStorage() != null && getItemsFromLocalStorage() != undefined ? (generatedImagesArray = getItemsFromLocalStorage("images")) : (generatedImagesArray = []);
 
 class generatedImage {
-    constructor(imageSrc, prompt, negtPrompt, style, creationTime, aspectRatio, seed, steps, guidanceScale, safeFilter) {
+    constructor(imageSrc, prompt, creationTime, aspectRatio, seed, steps, guidanceScale, safeFilter) {
         this.imageSrc = imageSrc;
         this.prompt = prompt;
-        this.negPrompt = negtPrompt;
-        this.style = style;
         this.creationTime = creationTime;
         this.favourite = false;
         this.aspectRatio = aspectRatio;
@@ -57,8 +55,19 @@ const modalTableElements = document.querySelectorAll(".modalTable td");
 generateBtn.addEventListener("click", function (e) {
     loader.style.display = "block";
     const prompt = document.getElementById("prompt").value;
-    const negPrompt = document.getElementById("negprompt").value;
     let aspectRatio = document.getElementById("aspectRatio").value;
+    let width;
+    let height;
+    if(aspectRatio == "Kwadrat"){
+        width = 512;
+        height = 512;
+    } else if(aspectRatio == "Portret"){
+        width = 512;
+        height = 768;
+    } else {
+        width = 768;
+        height = 512
+    }
     let seed = Number(document.getElementById("seed").value);
     seed != 0 ? (seed = seed) : (seed = Math.floor(Math.random() * 9007199254740991) + 1);
     const guidanceScale = document.getElementById("guidanceScale").value;
@@ -67,7 +76,7 @@ generateBtn.addEventListener("click", function (e) {
     const steps = Number(document.getElementById("steps").value);
     const safeFilter = document.getElementById("safeFilter").checked;
 
-    if (prompt.length > 0 && seed >= 0 && seed <= 9007199254740991 && guidanceScale >= 5 && guidanceScale <= 50 && steps >= 10 && steps <= 100) {
+    if (prompt.length > 0 && seed >= 0 && seed <= 9007199254740991 && guidanceScale >= 5 && guidanceScale <= 50 && steps >= 10 && steps <= 30) {
         e.preventDefault();
         generateBtn.disabled = true;
         loaderContainer.style.display = "flex";
@@ -80,89 +89,90 @@ generateBtn.addEventListener("click", function (e) {
             loadingTime.textContent = timePassed.toFixed(1);
         }, 100);
 
-        const API_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjlhNTJhNzY1ZjBkODMzMzM5ZWE3OTk2NjY0ZmVlYjg4IiwiY3JlYXRlZF9hdCI6IjIwMjQtMDEtMjBUMTI6NTE6MzAuMjU4NTkwIn0.yUj8CyQbPUuQ186Rw9o4n8I6-pg_eTlrGblSFyKylxU";
-        const options = {
-            method: "POST",
-            url: "https://api.monsterapi.ai/v1/generate/sdxl-base",
+        
+    
+        let myResponse;
+        fetch('https://stablehorde.net/api/v2/generate/async', {
+            method: 'POST',
             headers: {
-                accept: "application/json",
-                "content-type": "application/json",
-                authorization: `Bearer ${API_KEY}`,
+                'accept': 'application/json',
+                'apikey': '0000000000',
+                'Client-Agent': 'unknown:0:unknown',
+                'Content-Type': 'application/json'
             },
+            body: JSON.stringify({
+                'prompt': prompt,
+                'params': {
+                    'cfg_scale': Number(guidanceScale),
+                    'height': height,
+                    'width': width,
+                    'seed': String(seed),
+                    'steps': steps
+                },
+                'nfsw': safeFilter
 
-            data: {
-                prompt: prompt,
-                negprompt: negPrompt,
-                aspect_ratio: aspectRatio,
-                seed: seed,
-                guidance_scale: guidanceScale,
-                safe_filter: safeFilter,
-                samples: 1,
-                steps: steps,
-                style: style,
-            },
-        };
-
-        axios
-            .request(options)
-            .then(function (response) {
-                if (response.data.message == "Request accepted successfully") {
-                    const options2 = {
-                        method: "GET",
-                        url: `https://api.monsterapi.ai/v1/status/${response.data.process_id}`,
+            })
+        }).then(function(response){
+            console.log(response)
+            response.json().then(function(response2){
+                if(response.statusText = 'ACCEPTED'){
+                    const inter = setInterval(() => {
+                        fetch(`https://stablehorde.net/api/v2/generate/status/${response2.id}`, {
                         headers: {
-                            accept: "application/json",
-                            authorization: `Bearer ${API_KEY}`,
-                        },
-                    };
-
-                    let inv = setInterval(function () {
-                        axios.request(options2).then(function (response2) {
-                            if (response2.data.status == "IN_QUEUE") {
-                                loadingStatus.textContent = "Oczekuję w kolejce...";
-                            } else if (response2.data.status == "IN_PROGRESS") {
-                                loadingStatus.textContent = "Generuję...";
-                            } else if (response2.data.status == "COMPLETED") {
-                                loadingStatus.textContent = "";
-                                clearInterval(inv);
+                            'accept': 'application/json',
+                            'Client-Agent': 'unknown:0:unknown'
+                            }
+                        }).then(function(response){
+                            console.log(response)
+                            if(response.status == 200 || response.status == 429){
+                                if(response.status == 200){
+                                    response.json().then(function(response){
+                                        console.log(response)
+                                        if(response.waiting == 1){
+                                            loadingStatus.textContent = "Oczekuję w kolejce...";
+                                        } else if(response.processing == 1){
+                                            loadingStatus.textContent = "Generuję...";
+                                        } else if(response.finished == 1){
+                                            loadingStatus.textContent = "";
+                                            clearInterval(inter);
+                                            clearInterval(timer);
+                                            loaderContainer.style.display = "none";
+                                            generatedImg.src = response.generations[0].img;
+                                            generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter == true ? "TAK" : "NIE"));
+                                            pushItemsToLocalStorage();
+                                            updateTable();
+                                            generateBtn.disabled = false;
+                                            const notification = new Notification("AI Image Generator", { body: "Twój obraz został wygenerowany", icon: "../Logo/favicon.PNG" })
+                                        } else {         
+                                            loadingStatus.textContent = "Wystąpił Błąd: Spróbuj jeszcze raz"
+                                            generateBtn.disabled = false;
+                                            clearInterval(inter)
+                                            clearInterval(timer);
+                                            loaderContainer.style.display = "none";
+                                        }
+                                    })
+                                }
+                                
+                            } else {
+                                loadingStatus.textContent = "Wystąpił Błąd: Spróbuj jeszcze raz"
+                                generateBtn.disabled = false;
+                                clearInterval(inter)
                                 clearInterval(timer);
                                 loaderContainer.style.display = "none";
-                                generatedImg.src = response2.data.result.output[0];
-                                if (aspectRatio == "square") {
-                                    aspectRatio = "kwadrat";
-                                } else if (aspectRatio == "portrait") {
-                                    aspectRatio = "portret";
-                                } else {
-                                    aspectRatio = "Krajobraz";
-                                }
-
-                                generatedImagesArray.push(new generatedImage(generatedImg.src, prompt, negPrompt, (style = convertStyleToPolish(style)), `${timePassed.toFixed(1)}s`, aspectRatio, seed, steps, guidanceScale, safeFilter));
-                                pushItemsToLocalStorage();
-                                updateTable();
-                                generateBtn.disabled = false;
-                                const notification = new Notification("AI Image Generator", { body: "Twój obraz został wygenerowany", icon: "../Logo/favicon.PNG" })
-                                
-                            } else if ((response2.data.status = "FAILED")) {
-                                clearInterval(inv);
-                                clearInterval(timer);
-                                generateBtn.disabled = false;
-                                loader.style.display = "none";
-                                if ((response2.data.errorMessage = "The provided prompt contains NSFW content. Please provide a clean prompt")) {
-                                    loadingStatus.textContent = "Twoje polecenie zawiera treści zablokowane przez filtr NSFW. Jeżeli mimo to chcesz wygenerować taki obraz, wyłacz bezpieczny filtr";
-                                } else {
-                                    loadingStatus.textContent = response2.data.status;
-                                }
                             }
-                        });
-                    }, 1000);
+                            
+                        })
+                        
+                    }, 1000)
                 } else {
-                    loadingStatus.textContent = "Wystąpił Błąd: " + response.data.message;
+                    loadingStatus.textContent = "Wystąpił Błąd: Spróbuj jeszcze raz"
                     generateBtn.disabled = false;
                 }
+                
+                
             })
-            .catch(function (error) {
-                console.log("error");
-            });
+        })
+
     }
 });
 
@@ -179,8 +189,6 @@ function updateTable(phrase) {
         generatedImagesArray.forEach((item, index) => {
             if (item.prompt.toLowerCase().includes(phrase) && searchSelect.value == "prompt") {
                 createTable(item, index);
-            } else if (item.negPrompt.toLowerCase().includes(phrase) && searchSelect.value == "negprompt") {
-                createTable(item, index);
             } else if (item.creationTime.toLowerCase().includes(phrase) && searchSelect.value == "creationTime") {
                 createTable(item, index);
             }
@@ -194,7 +202,6 @@ function createTable(item, index) {
     const imgContainer = document.createElement("td");
     const img = document.createElement("img");
     const prompt = document.createElement("td");
-    const negprompt = document.createElement("td");
     const creationTime = document.createElement("td");
     const favouriteContainer = document.createElement("td");
     const favouriteIcon = document.createElement("i");
@@ -207,7 +214,6 @@ function createTable(item, index) {
     img.addEventListener("click", openModal);
     imgContainer.appendChild(img);
     prompt.textContent = item.prompt;
-    negprompt.textContent = item.negPrompt;
     creationTime.textContent = item.creationTime;
     favouriteIcon.classList.add("fa-solid", "fa-star", "pointer", "favouriteIcon", "icon");
     favouriteIcon.addEventListener("click", addToFavourites);
@@ -220,7 +226,6 @@ function createTable(item, index) {
     tr.appendChild(lp);
     tr.appendChild(imgContainer);
     tr.appendChild(prompt);
-    tr.appendChild(negprompt);
     tr.appendChild(creationTime);
     tr.appendChild(favouriteContainer);
     tr.appendChild(removeContainer);
@@ -228,76 +233,9 @@ function createTable(item, index) {
     tBody.appendChild(tr);
 }
 
-/*CONVERT STYLE TO POLISH LANGUAGE*/
 
-function convertStyleToPolish(style) {
-    switch (style) {
-        case "anime":
-            style = "Anime";
-            break;
-        case "enhance":
-            style = "Ulepszony";
-            break;
-        case "photographic":
-            style = "Fotograficzny";
-            break;
-        case "digital-art":
-            style = "Sztuka cyfrowa";
-            break;
-        case "comic-book":
-            style = "Komiks";
-            break;
-        case "fantasy-art":
-            style = "Sztuka fantastyczna";
-            break;
-        case "analog-film":
-            style = "Zdjęcie analogowe";
-            break;
-        case "neonpunk":
-            style = "Neonowy";
-            break;
-        case "isometric":
-            style = "Izometryczny";
-            break;
-        case "lowpoly":
-            style = "Lowpoly";
-            break;
-        case "origami":
-            style = "Origami";
-            break;
-        case "line-art":
-            style = "Rysunek kreskowy";
-            break;
-        case "craft-clay":
-            style = "Modelinowy";
-            break;
-        case "3d-model":
-            style = "Model 3D";
-            break;
-        case "pixel-art":
-            style = "Sztuka pikselowa";
-            break;
-        case "texture":
-            style = "Tekstura";
-            break;
-        case "futuristic":
-            style = "Futurystyczny";
-            break;
-        case "realism":
-            style = "Realistyczny";
-            break;
-        case "watercolor":
-            style = "Akwarelowy";
-            break;
-        case "photorealistic":
-            style = "Fotorealistyczny";
-            break;
-        default:
-            style = "Bez stylu";
-            break;
-    }
-    return style;
-}
+
+
 
 /* DELETE FUNCTION*/
 
@@ -327,14 +265,12 @@ function openModal() {
     const imgIndex = Number(this.parentNode.parentNode.childNodes[0].textContent) - 1;
     modalImage.src = generatedImagesArray[imgIndex].imageSrc;
     modalTableElements[0].textContent = generatedImagesArray[imgIndex].prompt;
-    modalTableElements[1].textContent = generatedImagesArray[imgIndex].negPrompt;
-    modalTableElements[2].textContent = generatedImagesArray[imgIndex].style;
-    modalTableElements[3].textContent = generatedImagesArray[imgIndex].creationTime;
-    modalTableElements[4].textContent = generatedImagesArray[imgIndex].aspectRatio;
-    modalTableElements[5].textContent = generatedImagesArray[imgIndex].seed;
-    modalTableElements[6].textContent = generatedImagesArray[imgIndex].guidanceScale;
-    modalTableElements[7].textContent = generatedImagesArray[imgIndex].steps;
-    modalTableElements[8].textContent = generatedImagesArray[imgIndex].safeFilter;
+    modalTableElements[1].textContent = generatedImagesArray[imgIndex].creationTime;
+    modalTableElements[2].textContent = generatedImagesArray[imgIndex].aspectRatio;
+    modalTableElements[3].textContent = generatedImagesArray[imgIndex].seed;
+    modalTableElements[4].textContent = generatedImagesArray[imgIndex].guidanceScale;
+    modalTableElements[5].textContent = generatedImagesArray[imgIndex].steps;
+    modalTableElements[6].textContent = generatedImagesArray[imgIndex].safeFilter;
 
     document.body.classList.add("unscrollable");
     modal.classList.add("showModal");
@@ -395,7 +331,6 @@ function getImageDataFromSessionStorage() {
         let sessionObj = JSON.parse(sessionStorage.copiedData);
 
         document.getElementById("prompt").value = sessionObj.prompt;
-        document.getElementById("negprompt").value = sessionObj.negprompt;
     }
 }
 

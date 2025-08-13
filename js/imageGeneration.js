@@ -89,9 +89,7 @@ generateBtn.addEventListener("click", function (e) {
             loadingTime.textContent = timePassed.toFixed(1);
         }, 100);
 
-        
     
-        let myResponse;
         fetch('https://stablehorde.net/api/v2/generate/async', {
             method: 'POST',
             headers: {
@@ -113,7 +111,6 @@ generateBtn.addEventListener("click", function (e) {
 
             })
         }).then(function(response){
-            console.log(response)
             response.json().then(function(response2){
                 if(response.statusText = 'ACCEPTED'){
                     const inter = setInterval(() => {
@@ -123,12 +120,13 @@ generateBtn.addEventListener("click", function (e) {
                             'Client-Agent': 'unknown:0:unknown'
                             }
                         }).then(function(response){
-                            console.log(response)
                             if(response.status == 200 || response.status == 429){
                                 if(response.status == 200){
                                     response.json().then(function(response){
-                                        console.log(response)
-                                        if(response.waiting == 1){
+                                        if(timePassed > 60 && response.waiting == 1){
+                                            loadingStatus.innerHTML = "Oczekiwanie na naszą kolej trwa dłużej niż zwykle, co może być związane z dużym obciążeniem serwera<br>Spróbuj ponownie później";
+                                        }
+                                        else if(response.waiting == 1){
                                             loadingStatus.textContent = "Oczekuję w kolejce...";
                                         } else if(response.processing == 1){
                                             loadingStatus.textContent = "Generuję...";
@@ -163,7 +161,7 @@ generateBtn.addEventListener("click", function (e) {
                             
                         })
                         
-                    }, 1000)
+                    }, 1500)
                 } else {
                     loadingStatus.textContent = "Wystąpił Błąd: Spróbuj jeszcze raz"
                     generateBtn.disabled = false;

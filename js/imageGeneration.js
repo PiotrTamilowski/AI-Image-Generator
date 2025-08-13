@@ -123,12 +123,12 @@ generateBtn.addEventListener("click", function (e) {
                             if(response.status == 200 || response.status == 429){
                                 if(response.status == 200){
                                     response.json().then(function(response){
-                                        if(timePassed > 60 && response.waiting == 1){
-                                            loadingStatus.innerHTML = "Oczekiwanie na naszą kolej trwa dłużej niż zwykle, co może być związane z dużym obciążeniem serwera<br>Możesz poczekać lub Spróbować ponownie później";
+                                        if(response.waiting == 1 && response.queue_position != 0){
+                                            loadingStatus.textContent = "Jesteśmy na " + response.queue_position + " pozycji w kolejce";
+                                        } else if(response.waiting == 1){
+                                            loadingStatus.textContent = "Oczekuję w kolejce";
                                         }
-                                        else if(response.waiting == 1){
-                                            loadingStatus.textContent = "Oczekuję w kolejce...";
-                                        } else if(response.processing == 1){
+                                        else if(response.processing == 1){
                                             loadingStatus.textContent = "Generuję...";
                                         } else if(response.finished == 1){
                                             loadingStatus.textContent = "";

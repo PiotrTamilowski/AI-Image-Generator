@@ -124,7 +124,7 @@ generateBtn.addEventListener("click", function (e) {
                                 if(response.status == 200){
                                     response.json().then(function(response){
                                         if(timePassed > 60 && response.waiting == 1){
-                                            loadingStatus.innerHTML = "Oczekiwanie na naszą kolej trwa dłużej niż zwykle, co może być związane z dużym obciążeniem serwera<br>Spróbuj ponownie później";
+                                            loadingStatus.innerHTML = "Oczekiwanie na naszą kolej trwa dłużej niż zwykle, co może być związane z dużym obciążeniem serwera<br>Możesz poczekać lub Spróbować ponownie później";
                                         }
                                         else if(response.waiting == 1){
                                             loadingStatus.textContent = "Oczekuję w kolejce...";
